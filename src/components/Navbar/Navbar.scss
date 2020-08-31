@@ -1,0 +1,57 @@
+@import '../../SASS_config';
+
+div {
+  @include flex;
+  --text-color: #6d1212;
+  --speed: 400ms;
+  --nav-size: 80px;
+  font-family: $head-font;
+  font-size: 20px;
+
+  .toggle-btn {
+    position: fixed;
+    width: 273px;
+    height: 30px;
+  }
+
+  .nav-close {
+    border: $def-bord;
+    position: fixed;
+    font-family: $head-font;
+    bottom: -100%;
+    transition: 1000ms;
+    height: var(--nav-size);
+  }
+
+  .nav-open {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 1000ms;
+    letter-spacing: 3px;
+    top: -100%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      border: $def-bord;
+      list-style: none;
+      margin-top: 32px;
+
+      li {
+        @include marg(10px, 3px, 3px, 10px);
+        @include pad(6px, 5px, 5px, 6px);
+
+        .icon {
+          font-size: 3rem;
+        }
+
+        .title {
+          color: $color-1;
+          font-size: 2rem;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}

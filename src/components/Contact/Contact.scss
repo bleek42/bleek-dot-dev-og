@@ -1,0 +1,35 @@
+@import '../../SASS_config';
+
+.Contact {
+  @include grid;
+
+  header {
+    @include flex;
+
+    h2 {
+      font-family: $head-font;
+    }
+
+    div > p {
+      font-family: $body-font;
+      font-size: 14px;
+    }
+  }
+
+  .email {
+    @include flex;
+
+    h4 {
+      font-family: $head-font;
+      @include marg(3px, 2px, 2px, 3px);
+    }
+
+    #my-email {
+      @include pad(2px, 1px, 1px, 2px);
+    }
+  }
+
+  .linkedin {
+    @include flex;
+  }
+}

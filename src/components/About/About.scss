@@ -1,0 +1,20 @@
+@import '../../SASS_config';
+
+.about {
+  @include flex;
+
+  h3 {
+    @include marg(4px, 2px, 2px, 4px);
+    @include pad(5px, 4px, 4px, 5px);
+  }
+
+  section {
+    border: $def-bord;
+    border-radius: $sec-radi;
+
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}

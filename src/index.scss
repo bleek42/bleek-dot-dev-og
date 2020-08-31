@@ -1,0 +1,14 @@
+@import './SASS_config';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient($bg-1, $bg-2);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

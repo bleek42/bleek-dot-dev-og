@@ -1,0 +1,5 @@
+@import './SASS_config';
+
+.App {
+  @include grid;
+}
