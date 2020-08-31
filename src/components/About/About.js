@@ -1,11 +1,12 @@
 import React from 'react';
+import { VscSymbolArray } from 'react-icons/vsc';
 
 import './About.scss';
 
 export default function About() {
   return (
     <div className="about">
-      <h3>About Me!</h3>
+      <h3>{<VscSymbolArray />} About</h3>
       <section>
         <p>
           I have recently graduated from Thinkful's Software Engineering

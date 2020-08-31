@@ -6,6 +6,8 @@
   h3 {
     @include marg(4px, 2px, 2px, 4px);
     @include pad(5px, 4px, 4px, 5px);
+    color: $color-1;
+    font-size: 36px;
   }
 
   section {

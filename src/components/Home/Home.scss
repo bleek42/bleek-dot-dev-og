@@ -4,26 +4,26 @@
   @include flex;
   @include marg(4px, 4px, 4px, 4px);
   @include pad(5px, 2px, 2px, 5px);
-}
 
-header {
-  font-family: $head-font;
-  border: $def-bord;
-  border-radius: $def-radi;
-  font-size: 24px;
-  @include pad(4px, 2px, 2px, 4px);
-  @include marg(2px, 2px, 2px, 2px);
+  header {
+    font-family: $head-font;
+    border: $def-bord;
+    border-radius: $def-radi;
+    font-size: 24px;
+    @include pad(4px, 2px, 2px, 4px);
+    @include marg(2px, 2px, 2px, 2px);
 
-  h1,
-  h2 {
-    color: $color-1;
-    text-align: center;
+    h1,
+    h2 {
+      color: $color-1;
+      text-align: center;
+    }
   }
 }
 
 section {
   @include flex;
-  @include marg(4px, 2px, 2px, 4px);
+  @include marg(30px, 2px, 2px, 4px);
   @include pad(4px, 3px, 3px, 4px);
   font-family: $body-font;
   border: $def-bord;

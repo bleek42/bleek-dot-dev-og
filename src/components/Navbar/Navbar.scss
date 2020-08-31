@@ -5,17 +5,27 @@ div {
   font-family: $head-font;
   font-size: 20px;
 
-  .toggle-btn {
-    border: $def-bord;
-    position: fixed;
-    width: 273px;
-    height: 30px;
-    background: $bg-2;
-    transition: filter 500ms;
+  .toggle-form {
+    position: -webkit-sticky;
 
-    &:hover {
-      filter: brightness(3);
-      color: #440744;
+    label {
+      display: block;
+      color: $color-1;
+      font-size: 30px;
+      font-weight: bolder;
+    }
+
+    .toggle-btn {
+      border: $def-bord;
+      width: 273px;
+      height: 30px;
+      background: $bg-2;
+      transition: filter 500ms;
+
+      &:hover {
+        filter: brightness(3);
+        color: #440744;
+      }
     }
   }
 
@@ -30,7 +40,7 @@ div {
     @include nav-flex;
     background: $bg-1;
     position: absolute;
-    top: 34px;
+    top: 65px;
     letter-spacing: 3px;
 
     ul {

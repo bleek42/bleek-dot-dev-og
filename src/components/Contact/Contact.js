@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { VscCommentDiscussion } from 'react-icons/vsc';
+
 import { API_TOKEN, API_URL } from '../../api-config';
 import './Contact.scss';
 
@@ -25,7 +27,7 @@ function Contact() {
   return (
     <div className="contact">
       <header>
-        <h2>Contact Me!</h2>
+        <h2 className="title">{<VscCommentDiscussion />} Contact</h2>
         <p>
           Whether you're about to make me an offer I can't refuse, thinking
           about becoming a developer, or somewhere in between: I'd love to

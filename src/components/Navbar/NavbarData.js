@@ -1,6 +1,5 @@
 import React from 'react';
-import { VscSymbolArray } from 'react-icons/vsc';
-import { VscCommentDiscussion, VscCode } from 'react-icons/vsc';
+import { VscCommentDiscussion, VscCode, VscSymbolArray } from 'react-icons/vsc';
 import { RiBracesFill } from 'react-icons/ri';
 
 export const NavbarData = [

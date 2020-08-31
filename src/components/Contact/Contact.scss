@@ -1,31 +1,32 @@
 @import '../../SASS_config';
 
 .Contact {
-  @include grid;
+  @include flex;
 
   header {
-    @include flex;
+    color: $color-1;
 
-    h2 {
+    .title {
       font-family: $head-font;
+      color: $color-1;
     }
 
-    div > p {
+    p {
       font-family: $body-font;
       font-size: 14px;
     }
   }
 
   .email {
-    @include flex;
+    @include marg(3px, 2px, 2px, 3px);
+    @include pad(2px, 1px, 1px, 2px);
 
     h4 {
       font-family: $head-font;
-      @include marg(3px, 2px, 2px, 3px);
     }
 
     #my-email {
-      @include pad(2px, 1px, 1px, 2px);
+      font-family: $body-font;
     }
   }
 
