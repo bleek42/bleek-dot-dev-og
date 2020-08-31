@@ -1,10 +1,10 @@
 $bg-1: #108585;
 $bg-2: #1d5bc7;
 $color-1: #2be621;
+$color-2: #40a556;
 $def-bord: 4px solid black;
 $def-radi: 30% 25% / 10% 35%;
 $sec-radi: 20% 10% / 10% 20%;
-
 $head-font: birdman;
 $body-font: Oxanium;
 
@@ -30,6 +30,12 @@ $body-font: Oxanium;
   flex-flow: column;
 }
 
+@mixin nav-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 @mixin pad($top, $right, $bottom, $left) {
   padding-top: $top;
   padding-right: $right;
@@ -52,4 +58,3 @@ $body-font: Oxanium;
   left: -100%;
   animation: slide-open 0.6s forwards;
 }
-

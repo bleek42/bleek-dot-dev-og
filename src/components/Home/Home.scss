@@ -1,7 +1,7 @@
 @import '../../SASS_config';
 
 .home {
-  @include grid;
+  @include flex;
   @include marg(4px, 4px, 4px, 4px);
   @include pad(5px, 2px, 2px, 5px);
 }

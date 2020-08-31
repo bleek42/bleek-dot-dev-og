@@ -1,9 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { VscMenu, VscFoldUp } from 'react-icons/vsc';
 
 import { NavbarData } from './NavbarData';
-
 import './Navbar.scss';
 
 function Navbar() {
@@ -13,11 +12,15 @@ function Navbar() {
 
   return (
     <div>
-      <button className="toggle-btn" onClick={toggleMenu}>
-        <GiHamburgerMenu />
+      <button
+        onMouseLeave={toggleMenu}
+        onMouseOver={toggleMenu}
+        className="toggle-btn"
+      >
+        {toggle ? <VscFoldUp /> : <VscMenu />}
       </button>
       <nav className={toggle ? 'nav-open' : 'nav-close'}>
-        <ul>
+        <ul onMouseLeave={toggleMenu}>
           {NavbarData.map((item, idx) => (
             <li key={idx} className={item.className}>
               <Link to={item.path}>

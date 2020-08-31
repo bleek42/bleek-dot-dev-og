@@ -1,13 +1,13 @@
 import React from 'react';
 import { VscSymbolArray } from 'react-icons/vsc';
-import { DiTerminal, DiCode } from 'react-icons/di';
-import { GrContact } from 'react-icons/gr';
+import { VscCommentDiscussion, VscCode } from 'react-icons/vsc';
+import { RiBracesFill } from 'react-icons/ri';
 
 export const NavbarData = [
   {
     title: 'Home',
     path: '/',
-    icon: <DiTerminal />,
+    icon: <RiBracesFill />,
     className: 'home',
   },
   {
@@ -19,13 +19,13 @@ export const NavbarData = [
   {
     title: 'Contact',
     path: '/contact',
-    icon: <GrContact />,
+    icon: <VscCommentDiscussion />,
     className: 'contact',
   },
   {
     title: 'Projects',
     path: '/projects',
-    icon: <DiCode />,
+    icon: <VscCode />,
     className: 'projects',
   },
 ];

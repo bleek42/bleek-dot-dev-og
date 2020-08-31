@@ -2,45 +2,52 @@
 
 div {
   @include flex;
-  --text-color: #6d1212;
-  --speed: 400ms;
-  --nav-size: 80px;
   font-family: $head-font;
   font-size: 20px;
 
   .toggle-btn {
+    border: $def-bord;
     position: fixed;
     width: 273px;
     height: 30px;
+    background: $bg-2;
+    transition: filter 500ms;
+
+    &:hover {
+      filter: brightness(3);
+      color: #440744;
+    }
   }
 
   .nav-close {
-    border: $def-bord;
+    @include nav-flex;
     position: fixed;
     font-family: $head-font;
     bottom: -100%;
-    transition: 1000ms;
-    height: var(--nav-size);
   }
 
   .nav-open {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: 1000ms;
+    @include nav-flex;
+    background: $bg-1;
+    position: absolute;
+    top: 34px;
     letter-spacing: 3px;
-    top: -100%;
 
     ul {
       margin: 0;
       padding: 0;
       border: $def-bord;
       list-style: none;
-      margin-top: 32px;
 
       li {
         @include marg(10px, 3px, 3px, 10px);
         @include pad(6px, 5px, 5px, 6px);
+        transition: filter 400ms;
+
+        &:hover {
+          filter: brightness(2.6);
+          color: $color-1;
+        }
 
         .icon {
           font-size: 3rem;
