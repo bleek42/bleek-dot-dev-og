@@ -53,18 +53,19 @@ function Contact() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Click here!
+          Click here to view my profile!
         </a>
       </section>
       <section className="github">
         <h4>Github</h4>
         <a
+          id="my-github"
           key={profile.html_url}
           href={profile.html_url}
           target="_blank"
           rel="noopener noreferrer"
         >
-          View my GitHub!
+          Click here to view my profile!
         </a>
         <p className="repos" key={profile.public_repos}>
           Total Repos: {profile.public_repos}

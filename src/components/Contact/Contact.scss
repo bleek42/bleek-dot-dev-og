@@ -1,12 +1,13 @@
 @import '../../SASS_config';
 
-.Contact {
+.contact {
   @include flex;
 
   header {
     color: $color-1;
 
     .title {
+      letter-spacing: 2px;
       font-family: $head-font;
       color: $color-1;
     }
@@ -18,19 +19,67 @@
   }
 
   .email {
-    @include marg(3px, 2px, 2px, 3px);
-    @include pad(2px, 1px, 1px, 2px);
+    @include marg(10px, 4px, 4px, 10px);
+    @include pad(10px, 3px, 3x, 10x);
+    text-align: center;
 
     h4 {
+      letter-spacing: 2px;
       font-family: $head-font;
+      font-size: 30px;
     }
 
     #my-email {
       font-family: $body-font;
+      transition: filter 500ms;
+
+      &:hover {
+        filter: brightness(3);
+        color: #440744;
+      }
     }
   }
 
   .linkedin {
-    @include flex;
+    @include marg(10px, 4px, 4px, 10px);
+    @include pad(10px, 3px, 3x, 10x);
+    text-align: center;
+
+    h4 {
+      letter-spacing: 2px;
+      font-family: $head-font;
+      font-size: 30px;
+    }
+
+    #my-linkedin {
+      font-family: $body-font;
+      transition: filter 500ms;
+
+      &:hover {
+        filter: brightness(3);
+        color: #440744;
+      }
+    }
+  }
+
+  .github {
+    @include marg(10px, 4px, 4px, 10px);
+    @include pad(10px, 3px, 3x, 10x);
+    text-align: center;
+
+    h4 {
+      letter-spacing: 2px;
+      font-family: $head-font;
+      font-size: 30px;
+    }
+
+    #my-github {
+      transition: filter 500ms;
+
+      &:hover {
+        filter: brightness(3);
+        color: #440744;
+      }
+    }
   }
 }
