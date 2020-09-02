@@ -12,10 +12,12 @@
   }
 
   section {
+    background-color: #159b9bb0;
     border: $def-bord;
     border-radius: $sec-radi;
 
     p {
+      font-family: $body-font;
       text-align: center;
       font-size: 20px;
     }
