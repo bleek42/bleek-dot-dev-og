@@ -9,52 +9,52 @@ $head-font: birdman;
 $body-font: Oxanium;
 
 @font-face {
-  font-family: Oxanium;
-  src: url(fonts/Oxanium/Oxanium-Bold.ttf);
+	font-family: Oxanium;
+	src: url(fonts/Oxanium/Oxanium-Bold.ttf);
 }
 
 @font-face {
-  font-family: birdman;
-  src: url(fonts/birdman/BIRDO___.TTF);
+	font-family: birdman;
+	src: url(fonts/birdman/BIRDO___.TTF);
 }
 
 @mixin grid {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 2rem;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 2rem;
 }
 
 @mixin flex {
-  display: flex;
-  flex-flow: column;
+	display: flex;
+	flex-flow: column;
 }
 
 @mixin nav-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 @mixin pad($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
 }
 
 @mixin marg($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
 }
 
 @mixin nav-bar {
-  position: fixed;
-  padding-left: 20px;
-  width: 400px;
-  z-index: 200;
-  left: -100%;
-  animation: slide-open 0.6s forwards;
+	position: fixed;
+	padding-left: 20px;
+	width: 400px;
+	z-index: 200;
+	left: -100%;
+	animation: slide-open 0.6s forwards;
 }

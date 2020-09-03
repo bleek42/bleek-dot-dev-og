@@ -1,0 +1,58 @@
+@import '../../SASS_config';
+
+.projects {
+	@include grid;
+
+	.project {
+		@include flex;
+		@include marg(5px, 2px, 2px, 5px);
+		@include pad(5px, 2px, 2px, 5px);
+		border: $def-bord;
+
+		.title {
+			color: $color-1;
+			font-family: $head-font;
+			letter-spacing: 2px;
+		}
+
+		p {
+			@include flex;
+			font-family: $body-font;
+
+			a {
+				@include marg(4px, 2px, 2px, 4px);
+			}
+		}
+
+		#screenshot-1 {
+			@include flex;
+			border: 2px solid black;
+		}
+
+		#screenshot-2 {
+			@include flex;
+			border: 2px solid black;
+		}
+
+		#screenshot-3 {
+			width: 50%;
+			@include flex;
+			border: 2px solid black;
+		}
+
+		#screenshot-4 {
+			@include flex;
+			border: 2px solid black;
+		}
+
+		#screenshot-5 {
+			@include flex;
+			border: 2px solid black;
+		}
+
+		#screenshot-6 {
+			@include flex;
+			border: 2px solid black;
+		}
+	}
+}
