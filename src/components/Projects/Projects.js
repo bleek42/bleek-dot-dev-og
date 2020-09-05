@@ -1,10 +1,19 @@
 import React from 'react';
-import './Projects.scss'
+
+import './Projects.scss';
+import screenshot1 from '../../images/quiz-app.png';
+import screenshot2 from '../../images/quiz-app2.png';
+import screenshot3 from '../../images/bookmarks-app.png';
+import screenshot4 from '../../images/covid19.jpg';
+import screenshot5 from '../../images/sirilla-learning.jpg';
+import screenshot6 from '../../images/trouvaille-1.jpg';
+import screenshot7 from '../../images/trouvaille-2.jpg';
+
 
 export default function Projects() {
 	return (
 		<div className="projects">
-			<section className="project">
+			<section className="project" id="jquery-quiz">
 				<h4 className="title">Multiple Choice Quiz App</h4>
 				<p>My first web application is a simple 5 question quiz, made for anyone
 				that enjoys simple bar trivia and wants to test their knowledge of
@@ -13,27 +22,25 @@ export default function Projects() {
 				answer after every question and allows the user to reset the quiz from
 				the beginning upon completion. This application utilizes the widely
 				deployed Javascript jQuery library, which is used in more than half of
-								the top 1 million websites in the world!</p>
-				<p>
-					You can take the quiz yourself
-										<a
-						href="https://thinkful-ei-macaw.github.io/quizapp_DB/"
-						target="_blank" rel="noopener noreferrer"
-					>
-						here!
+				the top 1 million websites in the world!
+								</p>
+				<a
+					href="https://thinkful-ei-macaw.github.io/quizapp_DB/"
+					target="_blank" rel="noopener noreferrer"
+				>
+					Click here to try it live!
+									</a>
+
+				<a
+					href="https://github.com/thinkful-ei-macaw/quizapp_DB"
+					target="_blank" rel="noopener noreferrer"
+				>
+					Click here to view the source code!
 										</a>
-										The source code can be found
-										<a
-						href="https://github.com/thinkful-ei-macaw/quizapp_DB"
-						target="_blank" rel="noopener noreferrer"
-					>
-						here!
-										</a>
-				</p>
+
 				<img
 					id="screenshot-1"
-					src="../../../public/images/quiz-app2.png"
-					// src="images/quiz app2.png"
+					src={screenshot1}
 					alt="quiz-app-screenshot1"
 					width="350"
 					height="300"
@@ -41,7 +48,7 @@ export default function Projects() {
 				<img
 					className="screenshots"
 					id="screenshot-2"
-					src="../../../public/images/quiz-app.png"
+					src={screenshot2}
 					alt="quiz-app-screenshot2"
 					width="350"
 					height="300"
@@ -50,8 +57,8 @@ export default function Projects() {
 			<section className="project">
 				<h4 className="title">Bookmarks App</h4>
 				<p>My second web application is a Bookmarks application, that also utilizes
-				jQuery and a public API that makes post, update, and delete requests. It
-				also has an expand/collapse function to view details of individual
+				jQuery and a public API that makes post, update, and delete requests.
+				It also has an expand/collapse function to view details of individual
 				bookmarks, validates user entry forms when adding a new bookmark, and a
 				rating function from 1 to 5 that allows you to filter by your bookmarks
 				rating. The API functionality allows the user to access them from any
@@ -60,19 +67,16 @@ export default function Projects() {
 					href="https://thinkful-ei-macaw.github.io/bleek-bookmarks-app/"
 					target="_blank" rel="noopener noreferrer"
 				>
-					Click here to see it live!
+					Click here to try it live!
 										</a>
 				<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app"
 					target="_blank" rel="noopener noreferrer">
-					The client-side code can be found here!
-										</a>
+					Click here to view the source code!										</a>
 				<img
 					className="screenshots"
 					id="screenshot-3"
-					src="../../../public/images/"
+					src={screenshot3}
 					alt="bookmark-screenshot"
-					width="600"
-					height="500"
 				/>
 			</section>
 			<section className="project">
@@ -91,24 +95,22 @@ export default function Projects() {
 				their thoughts, see what others commented, and view the current total
 								cases and fatalities relative to that state.</p>
 				<a href="https://corona-message-board-us.now.sh//" target="_blank" rel="noopener noreferrer">
-					Click here to see it live!
+					Click here to try it live!
 										</a>
 				<a href="https://github.com/thinkful-ei-macaw/covid-19-client-bleek" target="_blank" rel="noopener noreferrer">
-					The client source code can be found here!
-										</a>
-				<a href="https://github.com/thinkful-ei-macaw/covid-19-server-bleek" target="_blank" rel="noopener noreferrer">The server source code can be found here!</a>
+					Click here to view the client source code!										</a>
+				<a href="https://github.com/thinkful-ei-macaw/covid-19-server-bleek" target="_blank" rel="noopener noreferrer">
+					Click here to view the client source code!										</a>
 				<img
 					className="screenshots"
 					id="screenshot-4"
-					src="../../../public/images/"
+					src={screenshot4}
 					alt="bookmark-screenshot"
-					width="600"
-					height="500"
 				/>
 			</section>
 			<section className="project">
 				<h4 className="title">
-					Spaced Repetition & The Spanish Language
+					Sirilla Learning
 								</h4>
 				<p>My next full-stack effort using React and Node explores the learning
 				technique known as spaced-repetition. Spaced-repetition is exactly how
@@ -120,22 +122,21 @@ export default function Projects() {
 				interface with SASS style sheets. Please note that this was a joint
 								effort between a fellow student and I.</p>
 				<a
-					href="https://spaced-repetition-sb.now.sh/register"
+					href="https://spaced-repetition-sb.now.sh/"
 					target="_blank" rel="noopener noreferrer"
 				>
-					Click here to see it live!
+					Click here to try it live!
 										</a>
-				<a href="https://github.com/thinkful-ei-macaw/spaced-repetition-client-Brandon-Sara"
+				<a href="https://github.com/thinkful-ei-macaw/	spaced-repetition-client-Brandon-Sara"
 					target="_blank" rel="noopener noreferrer">
-					The client source code can be found here!
-										</a>
-										The server source code can be found
-										<a href="https://github.com/thinkful-ei-macaw/spaced-repetition-api-Brandon-Sara" rel="noopener noreferrer" target="_blank">here!
+					Click here to view the client source code!								</a>
+				<a href="https://github.com/thinkful-ei-macaw/spaced-repetition-api-Brandon-Sara" rel="noopener noreferrer" target="_blank">
+					Click here to view the server source code!
 										</a>
 				<img
 					className="screenshots"
 					id="screenshot-5"
-					src="../../../public/images/"
+					src={screenshot5}
 					alt="bookmark-screenshot"
 				/>
 			</section>
@@ -150,21 +151,26 @@ export default function Projects() {
 				secure registration & login, email verification & password reset with
 								Nodemailer, and an animated loading screen.</p>
 				<a
-					href="https://thinkful-ei-macaw.github.io/bleek-bookmarks-app/"
+					href="https://trouvaille.now.sh/"
 					target="_blank" rel="noopener noreferrer"
-				>
+				> Click here to demo the live app!
 				</a>
 				<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app">
-					Click here to view client source code!
+					Click here to view the client source code!
 										</a>
 				<a href="https://github.com/Trouvaille-team/trouvaille-server">
-					Click here to view server source code!
+					Click here to view the server source code!
 										</a>
 				<img
 					className="screenshots"
 					id="screenshot-6"
-					src="../../../public/images/"
-					alt="bookmark-screenshot"
+					src={screenshot6}
+					alt="trouvaille-1"
+				/>
+				<img className="screenshots"
+					id="screenshot-7"
+					src={screenshot7}
+					alt="trouvaille-2"
 				/>
 			</section>
 		</div >

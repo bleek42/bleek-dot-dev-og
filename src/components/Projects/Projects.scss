@@ -4,7 +4,6 @@
 	@include flex;
 
 	.project {
-		@include flex;
 		@include marg(5px, 2px, 2px, 5px);
 		@include pad(5px, 2px, 2px, 5px);
 		border: $def-bord;
@@ -18,42 +17,37 @@
 		p {
 			@include flex;
 			font-family: $body-font;
+		}
 
-			a {
-				@include marg(4px, 2px, 2px, 4px);
-			}
+		a {
+			@include marg(4px, 2px, 2px, 4px);
 		}
 
 		#screenshot-1 {
-			@include flex;
 			border: 2px solid black;
 		}
 
 		#screenshot-2 {
-			@include flex;
 			border: 2px solid black;
 		}
 
 		#screenshot-3 {
 			width: 50%;
-			@include flex;
 			border: 2px solid black;
 		}
 
 		#screenshot-4 {
 			width: 50%;
-			@include flex;
 			border: 2px solid black;
 		}
 
 		#screenshot-5 {
 			width: 50%;
-			@include flex;
 			border: 2px solid black;
 		}
 
 		#screenshot-6 {
-			@include flex;
+			width: 50%;
 			border: 2px solid black;
 		}
 	}
