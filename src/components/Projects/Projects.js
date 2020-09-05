@@ -149,20 +149,17 @@ export default function Projects() {
 				providing places you can visit along your way. Other features include
 				secure registration & login, email verification & password reset with
 								Nodemailer, and an animated loading screen.</p>
-				<p>
-					You can try it out for yourself{' '}
-					<a
-						href="https://thinkful-ei-macaw.github.io/bleek-bookmarks-app/"
-						target="_blank" rel="noopener noreferrer"
-					>
-					</a>
-					<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app">
-						Click here to view client source code!
+				<a
+					href="https://thinkful-ei-macaw.github.io/bleek-bookmarks-app/"
+					target="_blank" rel="noopener noreferrer"
+				>
+				</a>
+				<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app">
+					Click here to view client source code!
 										</a>
-					<a href="https://github.com/Trouvaille-team/trouvaille-server">
-						Click here to view server source code!
+				<a href="https://github.com/Trouvaille-team/trouvaille-server">
+					Click here to view server source code!
 										</a>
-				</p>
 				<img
 					className="screenshots"
 					id="screenshot-6"

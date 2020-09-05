@@ -1,7 +1,7 @@
 @import '../../SASS_config';
 
 .projects {
-	@include grid;
+	@include flex;
 
 	.project {
 		@include flex;
@@ -41,11 +41,13 @@
 		}
 
 		#screenshot-4 {
+			width: 50%;
 			@include flex;
 			border: 2px solid black;
 		}
 
 		#screenshot-5 {
+			width: 50%;
 			@include flex;
 			border: 2px solid black;
 		}

@@ -1,85 +1,103 @@
 @import '../../SASS_config';
 
 .contact {
-  @include flex;
+	@include flex;
 
-  header {
-    color: $color-1;
+	header {
+		background-color: #159b9bb0;
+		border: $def-bord;
+		border-radius: $def-radi;
+		text-align: center;
 
-    .title {
-      letter-spacing: 2px;
-      font-family: $head-font;
-      color: $color-1;
-    }
+		h4 {
+			letter-spacing: 2px;
+			font-family: $head-font;
+			color: $color-1;
+			font-size: 30px;
+		}
 
-    p {
-      font-family: $body-font;
-      font-size: 14px;
-    }
-  }
+		p {
+			font-family: $body-font;
+			font-size: 14px;
+		}
+	}
 
-  .email {
-    @include marg(10px, 4px, 4px, 10px);
-    @include pad(10px, 3px, 3x, 10x);
-    text-align: center;
+	.email {
+		@include marg(10px, 4px, 4px, 10px);
+		@include pad(10px, 3px, 3x, 10x);
+		background-color: #159b9bb0;
+		text-align: center;
+		border: $def-bord;
+		border-radius: $def-radi;
 
-    h4 {
-      letter-spacing: 2px;
-      font-family: $head-font;
-      font-size: 30px;
-    }
+		h4 {
+			letter-spacing: 2px;
+			font-family: $head-font;
+			font-size: 30px;
+			color: $color-1;
+		}
 
-    #my-email {
-      font-family: $body-font;
-      transition: filter 500ms;
+		#my-email {
+			font-family: $body-font;
+			transition: filter 500ms;
 
-      &:hover {
-        filter: brightness(3);
-        color: #440744;
-      }
-    }
-  }
+			&:hover {
+				filter: brightness(3);
+				color: #ac31ac;
+			}
+		}
+	}
 
-  .linkedin {
-    @include marg(10px, 4px, 4px, 10px);
-    @include pad(10px, 3px, 3x, 10x);
-    text-align: center;
+	.linkedin {
+		@include marg(10px, 4px, 4px, 10px);
+		@include pad(10px, 3px, 3x, 10x);
+		background-color: #159b9bb0;
+		text-align: center;
+		border: $def-bord;
+		border-radius: $def-radi;
 
-    h4 {
-      letter-spacing: 2px;
-      font-family: $head-font;
-      font-size: 30px;
-    }
+		h4 {
+			letter-spacing: 2px;
+			font-family: $head-font;
+			font-size: 30px;
+			color: $color-1;
+		}
 
-    #my-linkedin {
-      font-family: $body-font;
-      transition: filter 500ms;
+		#my-linkedin {
+			font-family: $body-font;
+			transition: filter 500ms;
 
-      &:hover {
-        filter: brightness(3);
-        color: #440744;
-      }
-    }
-  }
+			&:hover {
+				filter: brightness(3);
+				color: #ac31ac;
+			}
+		}
+	}
 
-  .github {
-    @include marg(10px, 4px, 4px, 10px);
-    @include pad(10px, 3px, 3x, 10x);
-    text-align: center;
+	.github {
+		@include marg(10px, 4px, 4px, 10px);
+		@include pad(10px, 3px, 3x, 10x);
+		background-color: #159b9bb0;
+		text-align: center;
+		border: $def-bord;
+		border-radius: $def-radi;
 
-    h4 {
-      letter-spacing: 2px;
-      font-family: $head-font;
-      font-size: 30px;
-    }
+		h4 {
+			letter-spacing: 2px;
+			font-family: $head-font;
+			font-size: 30px;
+			letter-spacing: 2px;
+			color: $color-1;
+		}
 
-    #my-github {
-      transition: filter 500ms;
+		#my-github {
+			font-family: $body-font;
+			transition: filter 500ms;
 
-      &:hover {
-        filter: brightness(3);
-        color: #440744;
-      }
-    }
-  }
+			&:hover {
+				filter: brightness(3);
+				color: #ac31ac;
+			}
+		}
+	}
 }
