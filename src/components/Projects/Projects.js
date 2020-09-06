@@ -94,19 +94,29 @@ export default function Projects() {
 				occupation. From there, they are directed to the state they can leave
 				their thoughts, see what others commented, and view the current total
 								cases and fatalities relative to that state.</p>
-				<a href="https://corona-message-board-us.now.sh//" target="_blank" rel="noopener noreferrer">
-					Click here to try it live!
+				<ul>
+					<li>
+						<a href="https://corona-message-board-us.now.sh//" target="_blank" rel="noopener noreferrer">
+							Click here to try it live!
 										</a>
-				<a href="https://github.com/thinkful-ei-macaw/covid-19-client-bleek" target="_blank" rel="noopener noreferrer">
-					Click here to view the client source code!										</a>
-				<a href="https://github.com/thinkful-ei-macaw/covid-19-server-bleek" target="_blank" rel="noopener noreferrer">
-					Click here to view the client source code!										</a>
-				<img
-					className="screenshots"
-					id="screenshot-4"
-					src={screenshot4}
-					alt="bookmark-screenshot"
-				/>
+					</li>
+					<li>
+						<a href="https://github.com/thinkful-ei-macaw/covid-19-client-bleek" target="_blank" rel="noopener noreferrer">
+							Click here to view the client source code!										</a>
+					</li>
+					<li>
+						<a href="https://github.com/thinkful-ei-macaw/covid-19-server-bleek" target="_blank" rel="noopener noreferrer">
+							Click here to view the client source code!										</a>
+					</li>
+				</ul>
+				<details>
+					<img
+						className="screenshots"
+						id="screenshot-4"
+						src={screenshot4}
+						alt="bookmark-screenshot"
+					/>
+				</details>
 			</section>
 			<section className="project">
 				<h4 className="title">
@@ -121,24 +131,34 @@ export default function Projects() {
 				JSON WebToken for secure user registration & login, and a modern user
 				interface with SASS style sheets. Please note that this was a joint
 								effort between a fellow student and I.</p>
-				<a
-					href="https://spaced-repetition-sb.now.sh/"
-					target="_blank" rel="noopener noreferrer"
-				>
-					Click here to try it live!
+				<ul>
+					<li>
+						<a
+							href="https://spaced-repetition-sb.now.sh/"
+							target="_blank" rel="noopener noreferrer"
+						>
+							Click here to try it live!
 										</a>
-				<a href="https://github.com/thinkful-ei-macaw/	spaced-repetition-client-Brandon-Sara"
-					target="_blank" rel="noopener noreferrer">
-					Click here to view the client source code!								</a>
-				<a href="https://github.com/thinkful-ei-macaw/spaced-repetition-api-Brandon-Sara" rel="noopener noreferrer" target="_blank">
-					Click here to view the server source code!
+					</li>
+					<li>
+						<a href="https://github.com/thinkful-ei-macaw/	spaced-repetition-client-Brandon-Sara"
+							target="_blank" rel="noopener noreferrer">
+							Click here to view the client source code!								</a>
+					</li>
+					<li>
+						<a href="https://github.com/thinkful-ei-macaw/spaced-repetition-api-Brandon-Sara" rel="noopener noreferrer" target="_blank">
+							Click here to view the server source code!
 										</a>
-				<img
-					className="screenshots"
-					id="screenshot-5"
-					src={screenshot5}
-					alt="bookmark-screenshot"
-				/>
+					</li>
+				</ul>
+				<details>
+					<img
+						className="screenshots"
+						id="screenshot-5"
+						src={screenshot5}
+						alt="bookmark-screenshot"
+					/>
+				</details>
 			</section>
 			<section className="project">
 				<h4 className="title">Trouvaille</h4>
@@ -150,28 +170,39 @@ export default function Projects() {
 				providing places you can visit along your way. Other features include
 				secure registration & login, email verification & password reset with
 								Nodemailer, and an animated loading screen.</p>
-				<a
-					href="https://trouvaille.now.sh/"
-					target="_blank" rel="noopener noreferrer"
-				> Click here to demo the live app!
-				</a>
-				<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app">
-					Click here to view the client source code!
+				<ul>
+					<li>
+						<a
+							href="https://trouvaille.now.sh/"
+							target="_blank" rel="noopener noreferrer"
+						> Click here to demo the live app!
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app">
+							Click here to view the client source code!
 										</a>
-				<a href="https://github.com/Trouvaille-team/trouvaille-server">
-					Click here to view the server source code!
+					</li>
+					<li>
+						<a href="https://github.com/Trouvaille-team/trouvaille-server">
+							Click here to view the server source code!
 										</a>
-				<img
-					className="screenshots"
-					id="screenshot-6"
-					src={screenshot6}
-					alt="trouvaille-1"
-				/>
-				<img className="screenshots"
-					id="screenshot-7"
-					src={screenshot7}
-					alt="trouvaille-2"
-				/>
+					</li>
+				</ul>
+				<details>
+					<summary>Click for screen captures</summary>
+					<img
+						className="screenshots"
+						id="screenshot-6"
+						src={screenshot6}
+						alt="trouvaille-1"
+					/>
+					<img className="screenshots"
+						id="screenshot-7"
+						src={screenshot7}
+						alt="trouvaille-2"
+					/>
+				</details>
 			</section>
 		</div >
 	);

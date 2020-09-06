@@ -6,8 +6,8 @@ import './About.scss';
 export default function About() {
   return (
     <div className="about">
-      <h3>{<VscSymbolArray />} About</h3>
       <section>
+        <h3>{<VscSymbolArray />} About</h3>
         <p>
           I have recently graduated from Thinkful's Software Engineering
           Immersion program. I have implemented a variety of projects using
