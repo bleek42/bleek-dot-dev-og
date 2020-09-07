@@ -1,76 +1,78 @@
 @import '../../SASS_config';
 
 div {
-  @include flex;
-  font-family: $head-font;
-  font-size: 20px;
+	@include flex;
+	font-family: $head-font;
+	font-size: 20px;
 
-  .toggle-form {
-    position: -webkit-sticky;
+	.toggle-form {
+		margin: 0;
 
-    label {
-      display: block;
-      color: $color-1;
-      font-size: 30px;
-      font-weight: bolder;
-      letter-spacing: 2px;
-    }
+		label {
+			text-shadow: 3px 2px black;
+			display: block;
+			color: $color-1;
+			font-size: 30px;
+			font-weight: bolder;
+			letter-spacing: 2px;
+		}
 
-    .toggle-btn {
-      border: $def-bord;
-      width: 273px;
-      height: 30px;
-      background: $bg-2;
-      transition: filter 500ms;
+		.toggle-btn {
+			border: $def-bord;
+			width: 273px;
+			height: 30px;
+			background: $bg-2;
+			transition: filter 500ms;
 
-      &:hover {
-        filter: brightness(3);
-        color: #440744;
-      }
-    }
-  }
+			&:hover {
+				filter: brightness(3);
+				color: #440744;
+			}
+		}
+	}
 
-  .nav-close {
-    @include nav-flex;
-    position: fixed;
-    font-family: $head-font;
-    bottom: -100%;
-  }
+	.nav-close {
+		@include nav-flex;
+		position: fixed;
+		font-family: $head-font;
+		bottom: -100%;
+	}
 
-  .nav-open {
-    @include nav-flex;
-    background: $bg-1;
-    position: absolute;
-    top: 65px;
-    letter-spacing: 3px;
+	.nav-open {
+		@include nav-flex;
+		background: $bg-1;
+		position: absolute;
+		top: 65px;
+		letter-spacing: 3px;
+		text-shadow: 3px 2px black;
 
-    ul {
-      margin: 0;
-      padding: 0;
-      border: $def-bord;
-      list-style: none;
+		ul {
+			margin: 0;
+			padding: 0;
+			border: $def-bord;
+			list-style: none;
 
-      li {
-        @include marg(10px, 3px, 3px, 10px);
-        @include pad(6px, 5px, 5px, 6px);
-        transition: filter 400ms;
-        border-top: 1px solid black;
+			li {
+				@include marg(10px, 3px, 3px, 10px);
+				@include pad(6px, 5px, 5px, 6px);
+				transition: filter 400ms;
+				border-top: 1px solid black;
 
-        &:hover {
-          filter: brightness(2.6);
-          color: $color-1;
-        }
+				&:hover {
+					filter: brightness(2.6);
+					color: $color-1;
+				}
 
-        .icon {
-          font-size: 3rem;
-        }
+				.icon {
+					font-size: 3rem;
+				}
 
-        .title {
-          color: $color-1;
-          font-size: 2rem;
-          padding-left: 20px;
-        }
-      }
-    }
-  }
+				.title {
+					color: $color-1;
+					font-size: 2rem;
+					padding-left: 20px;
+				}
+			}
+		}
+	}
 }

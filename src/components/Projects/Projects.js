@@ -24,35 +24,43 @@ export default function Projects() {
 				deployed Javascript jQuery library, which is used in more than half of
 				the top 1 million websites in the world!
 								</p>
-				<a
-					href="https://thinkful-ei-macaw.github.io/quizapp_DB/"
-					target="_blank" rel="noopener noreferrer"
-				>
-					Click here to try it live!
+				<ul>
+					<li>
+						<a
+							href="https://thinkful-ei-macaw.github.io/quizapp_DB/"
+							target="_blank" rel="noopener noreferrer"
+						>
+							Click here to try it live
 									</a>
-
-				<a
-					href="https://github.com/thinkful-ei-macaw/quizapp_DB"
-					target="_blank" rel="noopener noreferrer"
-				>
-					Click here to view the source code!
+					</li>
+					<li>
+						<a
+							href="https://github.com/thinkful-ei-macaw/quizapp_DB"
+							target="_blank" rel="noopener noreferrer"
+						>
+							Click here to view the source code
 										</a>
+					</li>
+				</ul>
+				<details>
+					<summary>Click here to view screenshots</summary>
+					<img
+						id="screenshot-1"
+						src={screenshot1}
+						alt="quiz-app-screenshot1"
+						width="350"
+						height="300"
+					/>
+					<img
+						className="screenshots"
+						id="screenshot-2"
+						src={screenshot2}
+						alt="quiz-app-screenshot2"
+						width="350"
+						height="300"
+					/>
+				</details>
 
-				<img
-					id="screenshot-1"
-					src={screenshot1}
-					alt="quiz-app-screenshot1"
-					width="350"
-					height="300"
-				/>
-				<img
-					className="screenshots"
-					id="screenshot-2"
-					src={screenshot2}
-					alt="quiz-app-screenshot2"
-					width="350"
-					height="300"
-				/>
 			</section>
 			<section className="project">
 				<h4 className="title">Bookmarks App</h4>
@@ -63,21 +71,31 @@ export default function Projects() {
 				rating function from 1 to 5 that allows you to filter by your bookmarks
 				rating. The API functionality allows the user to access them from any
 								device, as any bookmarks app should!</p>
-				<a
-					href="https://thinkful-ei-macaw.github.io/bleek-bookmarks-app/"
-					target="_blank" rel="noopener noreferrer"
-				>
-					Click here to try it live!
+				<ul>
+					<li>
+						<a
+							href="https://thinkful-ei-macaw.github.io/bleek-bookmarks-app/"
+							target="_blank" rel="noopener noreferrer"
+						>
+							Click here to try it live
 										</a>
-				<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app"
-					target="_blank" rel="noopener noreferrer">
-					Click here to view the source code!										</a>
-				<img
-					className="screenshots"
-					id="screenshot-3"
-					src={screenshot3}
-					alt="bookmark-screenshot"
-				/>
+					</li>
+					<li>
+						<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app"
+							target="_blank" rel="noopener noreferrer">
+							Click here to view the source code										</a>
+					</li>
+				</ul>
+
+				<details>
+					<summary>Click here to view screenshots</summary>
+					<img
+						className="screenshots"
+						id="screenshot-3"
+						src={screenshot3}
+						alt="bookmark-screenshot"
+					/>
+				</details>
 			</section>
 			<section className="project">
 				<h4 className="title">
@@ -97,19 +115,20 @@ export default function Projects() {
 				<ul>
 					<li>
 						<a href="https://corona-message-board-us.now.sh//" target="_blank" rel="noopener noreferrer">
-							Click here to try it live!
+							Click here to try it live
 										</a>
 					</li>
 					<li>
 						<a href="https://github.com/thinkful-ei-macaw/covid-19-client-bleek" target="_blank" rel="noopener noreferrer">
-							Click here to view the client source code!										</a>
+							Click here to view the client source code										</a>
 					</li>
 					<li>
 						<a href="https://github.com/thinkful-ei-macaw/covid-19-server-bleek" target="_blank" rel="noopener noreferrer">
-							Click here to view the client source code!										</a>
+							Click here to view the client source code										</a>
 					</li>
 				</ul>
 				<details>
+					<summary>Click here to view screenshots</summary>
 					<img
 						className="screenshots"
 						id="screenshot-4"
@@ -137,26 +156,27 @@ export default function Projects() {
 							href="https://spaced-repetition-sb.now.sh/"
 							target="_blank" rel="noopener noreferrer"
 						>
-							Click here to try it live!
+							Click here to try it live
 										</a>
 					</li>
 					<li>
 						<a href="https://github.com/thinkful-ei-macaw/	spaced-repetition-client-Brandon-Sara"
 							target="_blank" rel="noopener noreferrer">
-							Click here to view the client source code!								</a>
+							Click here to view the client source code								</a>
 					</li>
 					<li>
 						<a href="https://github.com/thinkful-ei-macaw/spaced-repetition-api-Brandon-Sara" rel="noopener noreferrer" target="_blank">
-							Click here to view the server source code!
+							Click here to view the server source code
 										</a>
 					</li>
 				</ul>
 				<details>
+					<summary>Click here to view screenshots</summary>
 					<img
 						className="screenshots"
 						id="screenshot-5"
 						src={screenshot5}
-						alt="bookmark-screenshot"
+						alt="sirilla-1"
 					/>
 				</details>
 			</section>
@@ -175,22 +195,22 @@ export default function Projects() {
 						<a
 							href="https://trouvaille.now.sh/"
 							target="_blank" rel="noopener noreferrer"
-						> Click here to demo the live app!
+						> Click here to demo the live app
 						</a>
 					</li>
 					<li>
 						<a href="https://github.com/thinkful-ei-macaw/bleek-bookmarks-app">
-							Click here to view the client source code!
+							Click here to view the client source code
 										</a>
 					</li>
 					<li>
 						<a href="https://github.com/Trouvaille-team/trouvaille-server">
-							Click here to view the server source code!
+							Click here to view the server source code
 										</a>
 					</li>
 				</ul>
 				<details>
-					<summary>Click for screen captures</summary>
+					<summary>Click here to view screenshots</summary>
 					<img
 						className="screenshots"
 						id="screenshot-6"
