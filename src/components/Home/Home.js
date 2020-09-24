@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="home">
       <header>
-        <h1>Welcome to bleek.tech</h1>
+        <h1>Brandon Leek</h1>
         <h2>Web Developer & Mobile Tech Enthusiast</h2>
       </header>
       <section>

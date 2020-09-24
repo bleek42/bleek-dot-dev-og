@@ -76,7 +76,7 @@ function Contact() {
         <p key={profile.followers}>
           Total Followers: {profile.followers}
         </p>
-        <p className="following" key={profile.following}>
+        <p key={profile.following}>
           Total Followiing: {profile.following}
         </p>
       </section>
