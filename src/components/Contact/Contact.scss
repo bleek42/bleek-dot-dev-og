@@ -45,9 +45,17 @@
 			font-family: $body-font;
 			transition: filter 500ms;
 
+			&:before {
+				color: blue;
+			}
+
 			&:hover {
 				filter: brightness(3);
-				color: #ac31ac;
+				color: #831b83;
+			}
+
+			&:after {
+				color: #831b83;
 			}
 		}
 	}
@@ -72,9 +80,17 @@
 			font-family: $body-font;
 			transition: filter 500ms;
 
+			&:before {
+				color: blue;
+			}
+
 			&:hover {
 				filter: brightness(3);
-				color: #ac31ac;
+				color: #831b83;
+			}
+
+			&:after {
+				color: #831b83;
 			}
 		}
 	}
@@ -100,9 +116,17 @@
 			font-family: $body-font;
 			transition: filter 500ms;
 
+			&:before {
+				color: blue;
+			}
+
 			&:hover {
 				filter: brightness(3);
-				color: #ac31ac;
+				color: #831b83;
+			}
+
+			&:after {
+				color: #831b83;
 			}
 		}
 

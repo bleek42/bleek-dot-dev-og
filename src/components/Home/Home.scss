@@ -20,6 +20,7 @@
 			text-align: center;
 			letter-spacing: 2px;
 			text-shadow: 3px 2px black;
+			@include pad(4px, 2px, 2px, 4px);
 		}
 	}
 
@@ -34,6 +35,33 @@
 
 		p {
 			color: black;
+			text-align: start;
+
+			.dwn-icn {
+				font-size: 32px;
+				align-items: center;
+			}
+		}
+
+		ul {
+			list-style: none;
+
+			li {
+				transition: filter 500ms;
+
+				&:before {
+					color: blue;
+				}
+
+				&:hover {
+					filter: brightness(3);
+					color: #831b83;
+				}
+
+				&:after {
+					color: #831b83;
+				}
+			}
 		}
 	}
 }
