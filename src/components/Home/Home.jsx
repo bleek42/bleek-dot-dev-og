@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import { CgCornerRightDown } from 'react-icons/cg';
 import './Home.scss';
 
