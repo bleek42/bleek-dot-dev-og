@@ -6,17 +6,17 @@
 
 html {
 	// background: repeating-radial-gradient(#21b1b1, #104eb9, #0fc01e);
-	background: repeating-radial-gradient(#0fc01e 24%, #104eb9 20%, #0d9bd3 36%);
+	background: radial-gradient(#104eb9 20%, #0d9bd3 36%);
 	// background: linear-gradient(#0fc01e, #104eb9);
 }
 
-body {
-	background-image: url(./images/source_code.png);
+// body {
+// 	// background-image: url(./images/source_code.png);
 
-	background-repeat: no-repeat repeat;
-	background-position: center;
-	min-height: 700px;
-}
+// 	background-repeat: no-repeat repeat;
+// 	background-position: center;
+// 	min-height: 700px;
+// }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
