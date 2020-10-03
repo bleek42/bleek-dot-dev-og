@@ -10,13 +10,13 @@ describe('Navbar component', () => {
         console.log(navbar.debug());
         const wrapper = navbar.find('.nav-close');
         expect(wrapper.length).toBe(1);
-    })
+    });
 
-    // it('renders a dropdown menu when the hamburger button is clicked', () => {
-    //     render(<MemoryRouter>
-    //         <Navbar />
-    //     </MemoryRouter>);
-    //     click('button');
-    //     expect()
-    // })
-})
+    it('renders a dropdown menu when the hamburger button is clicked', () => {
+        render(<MemoryRouter>
+            <Navbar />
+        </MemoryRouter>);
+        click('button');
+        expect();
+    });
+});

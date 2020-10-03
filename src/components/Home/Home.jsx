@@ -13,9 +13,8 @@ export default function Home() {
 				<p>
 					Welcome to bleek.tech! My name is Brandon Leek and I'm a full-stack
 					web developer. This site was created with React.js and features React
-					Hooks, React Router, React Icons, SASS/SCSS stylesheets, unit testing
-					with Jest & Enzyme, and background art by Android Jones, aptly titled
-					"Source Code"! Links to all provided below!
+					Hooks, React Router, React Icons, SASS/SCSS stylesheets, and unit
+					testing with Jest & Enzyme.
 					<div className="dwn-icn">
 						<CgCornerRightDown />
 					</div>
@@ -33,7 +32,7 @@ export default function Home() {
 							Portfolio repository on Github.com
 						</a>
 					</li>
-					<li>
+					{/* <li>
 						<a
 							id="aj"
 							target="_blank"
@@ -42,7 +41,7 @@ export default function Home() {
 						>
 							Check out more of Android Jones artwork
 						</a>
-					</li>
+					</li> */}
 					<li>
 						<a
 							id="react"
@@ -50,7 +49,7 @@ export default function Home() {
 							rel="noopener noreferrer"
 							href="https://reactjs.org/"
 						>
-							React.js - A JavaScript Library for creating UserInterfaces
+							React.js - A JavaScript Library for creating User Interfaces
 						</a>
 					</li>
 					<li>
@@ -60,7 +59,7 @@ export default function Home() {
 							rel="noopener noreferrer"
 							href="https://reactjs.org/"
 						>
-							React.js - A JavaScript Library for creating UserInterfaces
+							React.js - A JavaScript Library for creating User Interfaces
 						</a>
 					</li>
 					<li>
