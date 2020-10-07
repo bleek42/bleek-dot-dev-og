@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# bleek.tech - A portfolio website for & by Brandon C. Leek
 
-## Available Scripts
+===========================================================================
 
-In the project directory, you can run:
+### Technical Stack
 
-### `npm start`
+===========================================================================
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##### - React
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+##### - SASS / SCSS
 
-### `npm test`
+##### - React Icons
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### - Jest
 
-### `npm run build`
+##### - Enzyme.js
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### - React Router
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+##### - GitHub's API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### - Vercel
 
-### `npm run eject`
+### Overview
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+===========================================================================
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project was bootstrapped with Create React App, but made from scratch otherwise. I made this for the purpose of demonstrating my knowledge of modern front-end web development to potential employers and furthering that knowledge along the way. Domain name provided by get.tech domains and hosted by Vercel, using their CLI tool for CI / CD. Based on my very first portfolio, which consisted of nothing more than vanilla HTML & CSS, I felt it was important for me to make a more dynamic, interactive experience with the aforementioned technologies I have grown comfortable using. Feel free to take ideas from this codebase or contact me if you find yourself lost on how everything works! I hope you enjoy it as much as I enjoyed creating it and don't be afraid to shoot some constructive criticism my way.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Future Iterations of bleek.tech
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##### Some ideas I've been kicking around...
 
-## Learn More
+===========================================================================
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Node.js microservice for a contact form, with Nodemailer & Mailgun. I'd love for users to be able to send me emails with their name, subject, and a message right from my contact section!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Deployment on a Linux virtual machine with a provider (AWS, Linode, Azure, etc.) as the site grows in traffic and features.
 
-### Code Splitting
+3. Additional menu dropdown section for projects, allowing a user to navigate to each individual projects dedicated page, instead of having them all in one "Projects" component.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+4. Refactoring all stateful logic into custom hooks with useReducer & useContext!
 
-### Analyzing the Bundle Size
+5. A dedicated landing page with an image of myself and a brief bio, using some sort of dropdown animation.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+6. WebGL / Three.js animations in one (or maybe all!) sections of the site, with colorful and visually-pleasing textures.
