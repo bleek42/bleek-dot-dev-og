@@ -1,13 +1,13 @@
-@import './SASS_config';
+@import "./SASS_config";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	// background: repeating-radial-gradient(#21b1b1, #104eb9, #0fc01e);
-	background: radial-gradient(#104eb9 20%, #0d9bd3 36%);
-	// background: linear-gradient(#0fc01e, #104eb9);
+  // background: repeating-radial-gradient(#21b1b1, #104eb9, #0fc01e);
+  background: radial-gradient(#263349 24%, #5f48a0 36%);
+  // background: linear-gradient(#0fc01e, #104eb9);
 }
 
 // body {
@@ -19,6 +19,6 @@ html {
 // }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
