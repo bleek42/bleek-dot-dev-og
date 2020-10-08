@@ -1,28 +1,30 @@
-@import "../../SASS_config";
+@import '../../SASS_config';
+
+$sm-screen: 'only screen and (max-width: 740px)';
+$lg-screen: 'only screen and (min-width: 900px)';
 
 .about {
-  @include flex;
-  //   @include marg(4px, 5px, 5px, 4px);
-  //   @include pad(5px, 4px, 4px, 5px);
+	@include flex;
 
-  h3 {
-    color: $color-1;
-    font-size: 36px;
-    letter-spacing: 2px;
-    text-align: center;
-    text-shadow: 3px 2px black;
-  }
+	h3 {
+		color: $color-1;
+		font-size: 36px;
+		letter-spacing: 2px;
+		text-align: center;
+		text-shadow: 3px 2px black;
+	}
 
-  section {
-    @include pad(5px, 3px, 3px, 5px);
-    background-color: #159b9bb0;
-    border: $def-bord;
-    border-radius: $sec-radi;
+	section {
+		background-color: #159b9bb0;
+		border: $def-bord;
+		border-radius: $sec-radi;
 
-    p {
-      font-family: $body-font;
-      text-align: center;
-      font-size: 20px;
-    }
-  }
+		p {
+			margin: 10px;
+			padding: 10px;
+			font-family: $body-font;
+			text-align: center;
+			font-size: 20px;
+		}
+	}
 }
