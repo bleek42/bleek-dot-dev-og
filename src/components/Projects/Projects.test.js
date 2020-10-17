@@ -9,4 +9,5 @@ describe('Projects component', () => {
     const wrapper = shallow(<Projects />);
     expect(wrapper).not.toBeNull();
   });
+
 });

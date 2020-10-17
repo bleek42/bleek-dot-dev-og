@@ -4,19 +4,24 @@ import { MemoryRouter } from 'react-router-dom';
 import Navbar from './Navbar';
 
 describe('Navbar component', () => {
+    // let component
+    // beforeEach(() => { wrapper: render(<MemoryRouter><Navbar /></MemoryRouter>); });
 
     it('renders a closed menu bar without crashing', () => {
-        const navbar = shallow(<Navbar />);
-        console.log(navbar.debug());
-        const wrapper = navbar.find('.nav-close');
-        expect(wrapper.length).toBe(1);
+        const wrapper = shallow(<Navbar />);
+        expect(wrapper).not.toBeNull();
+    });
+
+    it('renders a closed menu with class nav-close', () => {
+        const wrapper = render(<MemoryRouter>
+            <Navbar />
+        </MemoryRouter>);
+        expect(wrapper.find('.nav-close')).to.have.lengthOf(1);
     });
 
     it('renders a dropdown menu when the hamburger button is clicked', () => {
-        render(<MemoryRouter>
-            <Navbar />
-        </MemoryRouter>);
-        click('button');
+        const wrapper = shallow(<Navbar />);
+
         expect();
     });
 });
