@@ -16,12 +16,14 @@ describe('Navbar component', () => {
         const wrapper = render(<MemoryRouter>
             <Navbar />
         </MemoryRouter>);
-        expect(wrapper.find('.nav-close')).to.have.lengthOf(1);
+        expect(wrapper.find('.nav-close').length).toEqual(1);
     });
 
     it('renders a dropdown menu when the hamburger button is clicked', () => {
-        const wrapper = shallow(<Navbar />);
-
-        expect();
+        const wrapper = shallow(<MemoryRouter>
+            <Navbar />
+        </MemoryRouter>);
+        const toggle = wrapper.find('.toggle-btn').at(1).simulate('click');
+        expect(toggle.length).toEqual(4);
     });
 });
