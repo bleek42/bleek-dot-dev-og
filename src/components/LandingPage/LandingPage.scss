@@ -1,0 +1,15 @@
+@import '../../SASS_config';
+
+.landing-page {
+	@include flex;
+
+	.modal {
+		margin: 15px;
+		padding: 20px;
+		border: 1px solid black;
+
+		h1 {
+			font-family: $head-font;
+		}
+	}
+}

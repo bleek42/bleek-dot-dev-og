@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CgCornerRightDown } from 'react-icons/cg';
+
+import LandingPage from '../LandingPage/LandingPage';
 import './Home.scss';
 
 export default function Home() {
+	const [landing, setLanding] = useState(true);
+
+	const handleLanding = () => setLanding(false);
+
+	if (landing) return <LandingPage handleLanding={handleLanding} />;
+
 	return (
 		<div className="home">
 			<header>
@@ -11,10 +19,8 @@ export default function Home() {
 			</header>
 			<section>
 				<p>
-					Welcome to bleek.tech! My name is Brandon Leek and I'm a full-stack
-					web developer. This site was created with React.js and features React
-					Hooks, React Router, React Icons, SASS/SCSS stylesheets, and unit
-					testing with Jest & Enzyme.
+					This site was created with React.js and features React Hooks, React Router,
+					React Icons, SASS/SCSS stylesheets, and unit testing with Jest & Enzyme.
 					<div className="dwn-icn">
 						<CgCornerRightDown />
 					</div>
@@ -32,16 +38,6 @@ export default function Home() {
 							Portfolio repository on Github.com
 						</a>
 					</li>
-					{/* <li>
-						<a
-							id="aj"
-							target="_blank"
-							rel="noopener noreferrer"
-							href="https://androidjones-obtain.com/?gclid=CjwKCAjwh7H7BRBBEiwAPXjadhkPGYgKyIHH1PdY8iEVzfSSD0qIDsHL3uevBzcC362xwoY-xJWkFhoCyq8QAvD_BwE"
-						>
-							Check out more of Android Jones artwork
-						</a>
-					</li> */}
 					<li>
 						<a
 							id="react"
