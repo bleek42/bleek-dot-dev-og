@@ -7,9 +7,9 @@ import './Home.scss';
 export default function Home() {
 	const [landing, setLanding] = useState(true);
 
-	const handleLanding = () => setLanding(false);
+	const dismissLanding = () => setLanding(!landing);
 
-	if (landing) return <LandingPage handleLanding={handleLanding} />;
+	if (landing) return <LandingPage dismissLanding={dismissLanding} />;
 
 	return (
 		<div className="home">
