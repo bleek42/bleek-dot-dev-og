@@ -8,9 +8,7 @@ import './Navbar.scss';
 function Navbar() {
 	const [toggle, setToggle] = useState(false);
 
-	const toggleMenu = () => {
-		setToggle(!toggle);
-	};
+	const toggleMenu = () => setToggle(!toggle);
 
 	return (
 		<div>

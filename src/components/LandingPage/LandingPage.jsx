@@ -1,6 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-const LandingPage = ({ dismissLanding }) => {
+export default function LandingPage() {
+	const history = useHistory();
+
+	const dismissLandingPage = () => history.push('/home');
+
 	return (
 		<div className="landing-page">
 			<span>Welcome to bleek.tech!</span>
@@ -9,9 +14,7 @@ const LandingPage = ({ dismissLanding }) => {
 				My name is Brandon and I am a Full-Stack JavaScript engineer, specializing in React
 				and Node.js applications.
 			</span>
-			<button onClick={dismissLanding}>Continue to bleek.tech</button>
+			<button onClick={dismissLandingPage}>Click to continue</button>
 		</div>
 	);
-};
-
-export default LandingPage;
+}

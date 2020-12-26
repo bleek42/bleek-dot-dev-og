@@ -10,23 +10,18 @@ import Navbar from './components/Navbar/Navbar';
 import './App.scss';
 
 function App() {
-	const [landing, setLanding] = useState(true);
-
 	return (
 		<div className="App">
-			{landing ? (
-				<LandingPage landing={setLanding} />
-			) : (
-				<Router>
-					<Navbar />
-					<Switch>
-						<Route exact path="/" component={Home}></Route>
-						<Route path="/about" component={About}></Route>
-						<Route path="/projects" component={Projects}></Route>
-						<Route path="/contact" component={Contact}></Route>
-					</Switch>
-				</Router>
-			)}
+			<Router>
+				<Navbar />
+				<Switch>
+					<Route exact path="/" component={LandingPage} />
+					<Route exact path="/home" component={Home} />
+					<Route path="/about" component={About} />
+					<Route path="/projects" component={Projects} />
+					<Route path="/contact" component={Contact} />
+				</Switch>
+			</Router>
 		</div>
 	);
 }

@@ -5,12 +5,6 @@ import LandingPage from '../LandingPage/LandingPage';
 import './Home.scss';
 
 export default function Home() {
-	const [landing, setLanding] = useState(true);
-
-	const dismissLanding = () => setLanding(!landing);
-
-	if (landing) return <LandingPage dismissLanding={dismissLanding} />;
-
 	return (
 		<div className="home">
 			<header>
