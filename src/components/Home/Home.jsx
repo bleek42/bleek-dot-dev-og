@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CgCornerRightDown } from 'react-icons/cg';
 
-import LandingPage from '../LandingPage/LandingPage';
 import './Home.scss';
 
 export default function Home() {

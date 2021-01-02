@@ -3,13 +3,20 @@
 .landing-page {
 	@include flex;
 
-	.modal {
-		margin: 15px;
-		padding: 20px;
-		border: 1px solid black;
+	.header {
+		font-size: 25px;
+		font-family: $head-font;
+		color: $color-1;
+		letter-spacing: 2px;
+		text-align: center;
+		text-shadow: 3px 2px black;
+	}
 
-		h1 {
-			font-family: $head-font;
-		}
+	.desc {
+		font-family: $body-font;
+	}
+
+	#bleek {
+		height: 500px;
 	}
 }
