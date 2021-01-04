@@ -13,7 +13,7 @@ export default function LandingPage() {
 
 	return (
 		<div className="landing-page">
-			<h3 className="header">Welcome to bleek.tech</h3>
+			<h2 className="typing">Welcome to bleek.tech</h2>
 			<img id="bleek" src={brandonMask} alt="brandon" />
 			<About />
 			<button onClick={dismissLandingPage}>Click to continue</button>

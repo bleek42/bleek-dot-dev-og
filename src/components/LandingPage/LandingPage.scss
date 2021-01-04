@@ -3,13 +3,21 @@
 .landing-page {
 	@include flex;
 
-	.header {
-		font-size: 25px;
+	h2 {
+		font-size: 35px;
 		font-family: $head-font;
 		color: $color-1;
 		letter-spacing: 2px;
 		text-align: center;
 		text-shadow: 3px 2px black;
+		text-decoration: underline;
+
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.typing {
+		animation: typing 3s steps(25) 1s 1 normal both, cursor 0.6s steps(12) infinite normal;
 	}
 
 	.desc {
@@ -17,6 +25,27 @@
 	}
 
 	#bleek {
-		height: 500px;
+		padding-bottom: 30px;
+		display: block;
+		height: 600px;
+	}
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes cursor {
+	from {
+		border-right: 3px solid $color-1;
+	}
+
+	to {
+		border-right: 3px solid $color-1;
 	}
 }
