@@ -3,6 +3,10 @@
 .projects {
 	@include flex;
 
+	.navbar {
+		margin-bottom: 20px;
+	}
+
 	.project {
 		@include marg(5px, 2px, 2px, 5px);
 		@include pad(5px, 2px, 2px, 5px);

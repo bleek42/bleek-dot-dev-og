@@ -2,8 +2,10 @@
 
 .home {
 	@include flex;
-	@include marg(4px, 4px, 4px, 4px);
-	@include pad(5px, 2px, 2px, 5px);
+
+	.navbar {
+		margin-bottom: 20px;
+	}
 
 	header {
 		background-color: #159b9bb0;

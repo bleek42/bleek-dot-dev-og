@@ -1,11 +1,15 @@
 import React from 'react';
 import { CgCornerRightDown } from 'react-icons/cg';
 
+import Navbar from '../Navbar/Navbar';
 import './Home.scss';
 
 export default function Home() {
 	return (
 		<div className="home">
+			<div className="navbar">
+				<Navbar />
+			</div>
 			<header>
 				<h1>Brandon Leek</h1>
 				<h2>Web Developer & Mobile Tech Enthusiast</h2>

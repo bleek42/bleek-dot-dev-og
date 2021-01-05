@@ -8,7 +8,10 @@ import './Navbar.scss';
 function Navbar() {
 	const [toggle, setToggle] = useState(false);
 
-	const toggleMenu = () => setToggle(!toggle);
+	const toggleMenu = (ev) => {
+		ev.preventDefault();
+		setToggle(!toggle);
+	};
 
 	return (
 		<div>

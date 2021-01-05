@@ -4,6 +4,7 @@ import { GrLinkedin } from 'react-icons/gr';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiGithub } from 'react-icons/fi';
 
+import Navbar from '../Navbar/Navbar';
 import { API_TOKEN, API_URL } from '../../api-config';
 import './Contact.scss';
 
@@ -28,12 +29,15 @@ function Contact() {
 
 	return (
 		<div className="contact">
+			<div className="navbar">
+				<Navbar />
+			</div>
 			<header>
 				<h4>{<VscCommentDiscussion />} Contact</h4>
 				<p>
-					Whether you're about to make me an offer I can't refuse, thinking
-					about becoming a developer, or somewhere in between: I'd love to
-					connect if you're taking the time to read this!
+					Whether you're about to make me an offer I can't refuse, thinking about becoming
+					a developer, or somewhere in between: I'd love to connect if you're taking the
+					time to read this!
 				</p>
 			</header>
 			<section className="email">

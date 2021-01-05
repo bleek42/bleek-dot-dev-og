@@ -5,7 +5,7 @@ import { RiBracesFill } from 'react-icons/ri';
 export const NavbarData = [
   {
     title: 'Home',
-    path: '/',
+    path: '/home',
     icon: <RiBracesFill />,
     className: 'home',
   },
