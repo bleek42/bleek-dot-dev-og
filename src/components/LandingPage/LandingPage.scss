@@ -4,9 +4,11 @@
 	@include flex;
 	align-items: center;
 
-	h2 {
+	.typing {
 		font-size: 35px;
 		font-family: $head-font;
+		border-right: 4px solid $color-1;
+		border-right-style: ridge;
 		color: $color-1;
 		letter-spacing: 2px;
 		text-align: center;
@@ -17,7 +19,7 @@
 	}
 
 	.typing {
-		animation: typing 5s steps(44, end) forwards, cursor 400ms steps(44) infinite normal;
+		animation: typing 3s steps(44, end) 1s 1 normal both, cursor 400ms steps(44, end) infinite;
 	}
 
 	#bleek {
@@ -32,16 +34,16 @@
 		width: 0;
 	}
 	to {
-		width: 100%;
+		width: 525px;
 	}
 }
 
 @keyframes cursor {
 	from {
-		border-right: 4px solid $color-1;
+		border-right-color: $color-1;
 	}
 
 	to {
-		border-right: 4px transparent;
+		border-right-color: transparent;
 	}
 }

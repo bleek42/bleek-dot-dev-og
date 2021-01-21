@@ -14,7 +14,9 @@ export default function LandingPage() {
 	return (
 		<div className="landing-page">
 			<h2 className="typing">Welcome to bleek.tech</h2>
-			<img id="bleek" src={brandonMask} alt="brandon" />
+			<div className="img-container">
+				<img id="bleek" src={brandonMask} alt="brandon" />
+			</div>
 			<button onClick={dismissLandingPage}>Click to continue</button>
 		</div>
 	);

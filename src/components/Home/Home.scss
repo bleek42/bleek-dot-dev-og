@@ -13,7 +13,7 @@
 		border: $def-bord;
 		border-radius: $def-radi;
 		font-size: 25px;
-		@include pad(4px, 2px, 2px, 4px);
+		@include pad(6px, 4px, 4px, 6px);
 		@include marg(2px, 2px, 2px, 2px);
 
 		h1,
