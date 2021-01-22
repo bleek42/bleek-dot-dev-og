@@ -1,8 +1,5 @@
 @import '../../SASS_config';
 
-$sm-screen: 'only screen and (max-width: 740px)';
-$lg-screen: 'only screen and (min-width: 900px)';
-
 .about {
 	@include flex;
 

@@ -1,10 +1,15 @@
 @import '../../SASS_config';
 
 .landing-page {
-	@include flex;
-	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 
 	.typing {
+		@include respond(phone) {
+			display: flex;
+			flex-wrap: 3;
+		}
 		font-size: 35px;
 		font-family: $head-font;
 		border-right: 4px solid $color-1;
@@ -24,8 +29,16 @@
 
 	#bleek {
 		padding-bottom: 30px;
-		display: block;
-		height: 600px;
+		height: auto;
+		position: relative;
+		right: 20px;
+		width: 200px;
+	}
+
+	.dismiss {
+		display: inline-flex;
+		border: 5px solid black;
+		width: 100px;
 	}
 }
 

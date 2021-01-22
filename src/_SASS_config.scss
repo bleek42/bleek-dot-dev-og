@@ -10,25 +10,19 @@ $sec-radi: 20% 10% / 10% 20%;
 $head-font: birdman;
 $body-font: Oxanium;
 
-@mixin pad-query(
-	$top: null,
-	$right: null,
-	$bottom: null,
-	$left: null,
-	$media: null
-) {
-	@if $media {
-		@media #{$media} {
-			padding-top: $top;
-			padding-right: $right;
-			padding-bottom: $bottom;
-			padding-left: $left;
+// $phone-width: 375px;
+// $tablet-width: 768px;
+
+@mixin respond($breakpoint) {
+	@if ($breakpoint == phone) {
+		@media (max-width: 375px) {
+			@content;
 		}
-	} @else {
-		padding-top: $top;
-		padding-right: $right;
-		padding-bottom: $bottom;
-		padding-left: $left;
+	}
+	@if ($breakpoint == tablet) {
+		@media (max-width: 768px) {
+			@content;
+		}
 	}
 }
 
