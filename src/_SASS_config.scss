@@ -10,21 +10,24 @@ $sec-radi: 20% 10% / 10% 20%;
 $head-font: birdman;
 $body-font: Oxanium;
 
-// $phone-width: 375px;
-// $tablet-width: 768px;
+// $breakpoints: (
+// 	phone: 375px,
+// 	tablet: 768px,
+// 	laptop: 1200px,
+// );
 
-@mixin respond($breakpoint) {
-	@if ($breakpoint == phone) {
-		@media (max-width: 375px) {
-			@content;
-		}
-	}
-	@if ($breakpoint == tablet) {
-		@media (max-width: 768px) {
-			@content;
-		}
-	}
-}
+// 	@mixin respond($breakpoint) {
+// 	@if ($breakpoint == phone) {
+// 		@media (max-width: 375px) {
+// 			@content;
+// 		}
+// 	}
+// 	@if ($breakpoint == tablet) {
+// 		@media (max-width: 768px) {
+// 			@content;
+// 		}
+// 	}
+// }
 
 @font-face {
 	font-family: Oxanium;
@@ -40,7 +43,7 @@ $body-font: Oxanium;
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: auto;
-	grid-gap: 2rem;
+	grid-gap: 4rem;
 }
 
 @mixin flex {

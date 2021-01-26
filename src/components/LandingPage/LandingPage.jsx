@@ -14,7 +14,13 @@ export default function LandingPage() {
 			<h2 className="typing">Welcome to bleek.tech</h2>
 			<div className="img-container">
 				<img id="bleek" src={brandonMask} alt="brandon" />
+				<ul>
+					<li>some info</li>
+					<li>some more info</li>
+					<li>even more info</li>
+				</ul>
 			</div>
+			<div className="info-container"></div>
 			<button className="dismiss" onClick={dismissLandingPage}>
 				Click to continue
 			</button>
