@@ -1,34 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { VscCommentDiscussion } from "react-icons/vsc";
 import { GrLinkedin } from "react-icons/gr";
 import { FiGithub } from "react-icons/fi";
 
-import { API_TOKEN, API_URL } from "../../api-config";
+import { useRequest } from "../../hooks/useRequest";
 import "./Contact.scss";
 
 function Contact() {
-	const [profile, setProfile] = useState({});
-	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState(null);
+	// const [profile, setProfile] = useState({});
+	// const [loading, setLoading] = useState(false);
+	// const [error, setError] = useState(null);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			setLoading(true);
-			try {
-				const req = {
-					Authorization: `Bearer ${API_TOKEN}`,
-				};
-				const res = await fetch(API_URL, req);
-				const data = await res.json();
-				setProfile(data);
-			} catch {
-				setError(true);
-			} finally {
-				setLoading(false);
-			}
-		};
-		fetchData();
-	}, []);
+	// useEffect(() => {
+	// 	let ignore = false;
+	// 	const fetchData = async () => {
+	// 		setLoading(true);
+	// 		try {
+	// 			const req = {
+	// 				Authorization: `Bearer ${API_TOKEN}`,
+	// 			};
+	// 			const res = await fetch(API_URL, req);
+	// 			const data = await res.json();
+	// 			if (!ignore) setProfile(data);
+	// 		} catch {
+	// 			setError(true);
+	// 		} finally {
+	// 			setLoading(false);
+	// 		}
+	// 	};
+
+	// 	fetchData();
+	// 	return () => {
+	// 		ignore = true;
+	// 	};
+	// }, []);
+
+	const state = useRequest();
 
 	return (
 		<div className="contact">
@@ -62,15 +69,15 @@ function Contact() {
 				>
 					Click here to view my GitHub!
 				</a>
-				{loading && <p>Loading profile data...</p>}
-				{profile && (
+				{state.loading && <p>Loading profile data...</p>}
+				{state.profile && (
 					<ul>
-						<li>Total Repos: {profile.public_repos}</li>
-						<li>Total Followers: {profile.followers}</li>
-						<li>Total Followiing: {profile.following}</li>
+						<li>Total Repos: {state.profile.public_repos}</li>
+						<li>Total Followers: {state.profile.followers}</li>
+						<li>Total Followiing: {state.profile.following}</li>
 					</ul>
 				)}
-				{error && <p>Error fetching profile data!</p>}
+				{state.error && <p>Error fetching profile data!</p>}
 			</section>
 		</div>
 	);
