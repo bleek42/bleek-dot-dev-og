@@ -35,7 +35,7 @@ function Contact() {
 	// 	};
 	// }, []);
 
-	const state = useRequest();
+	const { profile, loading, error } = useRequest();
 
 	return (
 		<div className="contact">
@@ -69,15 +69,15 @@ function Contact() {
 				>
 					Click here to view my GitHub!
 				</a>
-				{state.loading && <p>Loading profile data...</p>}
-				{state.profile && (
+				{loading && <p>Loading profile data...</p>}
+				{profile && (
 					<ul>
-						<li>Total Repos: {state.profile.public_repos}</li>
-						<li>Total Followers: {state.profile.followers}</li>
-						<li>Total Followiing: {state.profile.following}</li>
+						<li>Total Repos: {profile.public_repos}</li>
+						<li>Total Followers: {profile.followers}</li>
+						<li>Total Followiing: {profile.following}</li>
 					</ul>
 				)}
-				{state.error && <p>Error fetching profile data!</p>}
+				{error && <p>Error fetching profile data!</p>}
 			</section>
 		</div>
 	);

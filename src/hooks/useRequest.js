@@ -3,29 +3,29 @@ import { API_URL, API_TOKEN } from "../api-config";
 
 const initState = {
 	profile: {},
-	loading: false,
+	loading: true,
 	error: null,
 };
 
 const reducer = (state = initState, action) => {
 	switch (action.type) {
-		case "LOADING":
-			return { profile: null, error: null, loading: action.payload };
 		case "SUCCESS":
 			return { profile: action.payload, loading: false, error: false };
 		case "ERROR":
-			return { profile: null, loading: false, error: action.payload };
+			return { profile: null, loading: false, error: true };
 		default:
 			return state;
 	}
 };
 
 export const useRequest = () => {
-	const [state, dispatch] = useReducer(reducer, initState);
-	console.log(dispatch);
+	const [{ profile, loading, error }, dispatch] = useReducer(
+		reducer,
+		initState,
+	);
 	useEffect(() => {
 		let ignore = false;
-		dispatch({ type: "LOADING", payload: true })(async () => {
+		(async () => {
 			try {
 				const req = {
 					Authorization: `Bearer ${API_TOKEN}`,
@@ -34,13 +34,13 @@ export const useRequest = () => {
 				const data = await res.json();
 				if (!ignore) dispatch({ type: "SUCCESS", payload: data });
 			} catch {
-				dispatch({ type: "ERROR", payload: true });
+				dispatch({ type: "ERROR" });
 			}
 		})();
 		return () => {
 			ignore = true;
 		};
-	}, [state]);
+	}, []);
 
-	return state;
+	return { profile, loading, error };
 };
