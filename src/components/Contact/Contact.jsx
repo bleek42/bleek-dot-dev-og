@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { VscCommentDiscussion } from 'react-icons/vsc';
-import { GrLinkedin } from 'react-icons/gr';
-import { HiOutlineMail } from 'react-icons/hi';
-import { FiGithub } from 'react-icons/fi';
+import React, { useState, useEffect } from "react";
+import { VscCommentDiscussion } from "react-icons/vsc";
+import { GrLinkedin } from "react-icons/gr";
+import { FiGithub } from "react-icons/fi";
 
-import { API_TOKEN, API_URL } from '../../api-config';
-import './Contact.scss';
+import { API_TOKEN, API_URL } from "../../api-config";
+import "./Contact.scss";
 
 function Contact() {
 	const [profile, setProfile] = useState({});
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
+			setLoading(true);
 			try {
 				const req = {
 					Authorization: `Bearer ${API_TOKEN}`,
@@ -19,12 +21,14 @@ function Contact() {
 				const res = await fetch(API_URL, req);
 				const data = await res.json();
 				setProfile(data);
-			} catch (error) {
-				console.error(error);
+			} catch {
+				setError(true);
+			} finally {
+				setLoading(false);
 			}
 		};
 		fetchData();
-	}, [profile]);
+	}, []);
 
 	return (
 		<div className="contact">
@@ -33,20 +37,10 @@ function Contact() {
 				<p>
 					Whether you're about to make me an offer I can't refuse, thinking
 					about becoming a developer, or somewhere in between: I'd love to
-					connect if you're taking the time to read this!
+					connect if you're taking the time to read this! Please reach out on
+					LinkedIn or GitHub.
 				</p>
 			</header>
-			<section className="email">
-				<h4>{<HiOutlineMail />} Email</h4>
-				<a
-					id="my-email"
-					href="mailto:brandonleek42@gmail.com"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					brandonleek42@gmail.com
-				</a>
-			</section>
 			<section className="linkedin">
 				<h4>{<GrLinkedin />} LinkedIn</h4>
 				<a
@@ -55,23 +49,28 @@ function Contact() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Click here to view my profile!
+					Click here to view my LinkedIn!
 				</a>
 			</section>
 			<section className="github">
 				<h4>{<FiGithub />} Github</h4>
 				<a
 					id="my-github"
-					key={profile.html_url}
-					href={profile.html_url}
+					href="https://github.com/bleek42"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Click here to view my profile!
+					Click here to view my GitHub!
 				</a>
-				<p key={profile.public_repos}>Total Repos: {profile.public_repos}</p>
-				<p key={profile.followers}>Total Followers: {profile.followers}</p>
-				<p key={profile.following}>Total Followiing: {profile.following}</p>
+				{loading && <p>Loading profile data...</p>}
+				{profile && (
+					<ul>
+						<li>Total Repos: {profile.public_repos}</li>
+						<li>Total Followers: {profile.followers}</li>
+						<li>Total Followiing: {profile.following}</li>
+					</ul>
+				)}
+				{error && <p>Error fetching profile data!</p>}
 			</section>
 		</div>
 	);

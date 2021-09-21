@@ -1,7 +1,7 @@
-import React from 'react';
-import { VscSymbolArray } from 'react-icons/vsc';
+import React from "react";
+import { VscSymbolArray } from "react-icons/vsc";
 
-import './About.scss';
+import "./About.scss";
 
 export default function About() {
 	return (
@@ -15,25 +15,23 @@ export default function About() {
 				<p>
 					I graduated from Thinkful's Full-Stack Engineering Immersion course in
 					the Summer of 2020, and found an exciting new passion in programming.
-					I've been furthering my learning by contributing to personal and
-					open-source projects almost daily since, as I search for my place in
-					the tech industry. Looking forward to picking up a second programming
-					language one day: leaning towards something closer to the hardware,
-					like C++ or Rust, but remaining open to where I go next in my journey!
+					Continued efforts have resulted in my first break as a Junior NodeJS
+					Developer with a financial-tech start up called ZettaLabs.
 				</p>
 				<p>
-					Until then, my area of focus is React web applications & Node.js
-					server applications, alongside various libraries & frameworks, such as
-					TypeScript, Material UI, GraphQL, Puppeteer.js, and numerous others.
-					I'm always learning something new and very active in helping others in
-					my Slack & Discord groups.
+					My primary skills reside in React front-end applications & Node.js
+					back-end applications, but I'm always learning something new and very
+					active in helping others in my Slack & Discord groups. Some libraries
+					& frameworks I've been tinkering with include TypeScript, React
+					Native, Angular, NestJS, MongoDB, & GraphQL.
 				</p>
 				<p>
 					I've been using computers since I was in single-digits: from modding
 					computer games, tinkering with HTML in the days of MySpace.com,
-					installing custom OS's on my android phones, and now testing +
-					deploying fully functional web clients & servers. Prior experience in
-					my professional & personal life have given me a vested interest in the
+					exploring Linux distros like Ubuntu & Manjaro, rooting android phones
+					during my time as a Verizon sales rep, and now testing + deploying
+					fully functional web clients & servers. Prior experience in my
+					professional & personal life have given me a vested interest in the
 					direction information technology takes, having been in client-facing
 					technology sales and of course being a client myself!
 				</p>
