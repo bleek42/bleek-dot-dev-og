@@ -2,21 +2,14 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  // background: repeating-radial-gradient(#21b1b1, #104eb9, #0fc01e);
   background: radial-gradient(#263349 24%, #5f48a0 36%);
-  // background: linear-gradient(#0fc01e, #104eb9);
+  font-family: "'ProFontWindows NF', 'CodeNewRoman', 'CaskaydiaCove NF'";
 }
-
-// body {
-// 	// background-image: url(./images/source_code.png);
-
-// 	background-repeat: no-repeat repeat;
-// 	background-position: center;
-// 	min-height: 700px;
-// }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

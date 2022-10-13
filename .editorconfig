@@ -1,0 +1,22 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+indent_style = unset
+indent_size = unset
+end_of_line = unset
+trim_trailing_whitespace = unset
+
+[*.{js,ts}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.{jsx,tsx}]
+indent_style = tab
+tab_width = 2
+trim_trailing_whitespace = true
