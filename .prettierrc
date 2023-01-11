@@ -1,5 +1,5 @@
 {
-  "printWidth": 95,
+  "printWidth": 90,
   "editorconfig": true,
   "arrowParens": "always",
   "singleQuote": true,
@@ -9,7 +9,6 @@
   "bracketSameLine": true,
   "semi": true,
   "bracketSpacing": true,
-  "singleAttributePerLine": false,
-  "quoteProps": "as-needed",
-  "tabWidth": 2
+  "singleAttributePerLine": true,
+  "quoteProps": "as-needed"
 }
