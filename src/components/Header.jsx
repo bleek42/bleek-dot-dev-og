@@ -1,3 +1,4 @@
+import { navLinks } from 'src/constants/nav-links';
 import Navbar from './Navbar';
 
 export default function Header(props = {}) {
@@ -7,7 +8,7 @@ export default function Header(props = {}) {
 		<header>
 			<h1>Brandon Leek</h1>
 			<h2>bleek.dev</h2>
-			<Navbar />
+			<Navbar links={navLinks} />
 			<span className="page-header">
 				<h6>{props?.page || 'Untitled Page'}</h6>
 			</span>

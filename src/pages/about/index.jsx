@@ -1,9 +1,19 @@
 import { useState, useEffect, Fragment } from 'react';
 
+import Header from 'src/components/Header';
+import Section from 'src/components/Section';
+import Footer from 'src/components/Footer';
+
 export default function About(props = {}) {
 	console.log(props);
 
-	return <Fragment>{props?.children || null}</Fragment>;
+	return (
+		<Fragment>
+			<Header />
+			<Section />
+			<Footer />
+		</Fragment>
+	);
 }
 
 // import "./About.scss";

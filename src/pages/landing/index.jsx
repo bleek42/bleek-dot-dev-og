@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Section from '../../components/Section';
 
-export default function Welcome() {
+export default function Landing() {
 	return (
 		<Fragment>
 			<Section />

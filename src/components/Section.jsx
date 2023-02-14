@@ -55,7 +55,7 @@ export default function Section(props = {}) {
 			className="sect-comp flex-col">
 			<span>
 				<h3>
-					You are in the<pre>{props?.sectionName || 'unknown'}</pre>section!
+					You are in the<pre>{props?.name || 'unknown'}</pre>section!
 				</h3>
 				<i>
 					<VscSymbolArray />
@@ -63,7 +63,8 @@ export default function Section(props = {}) {
 			</span>
 			<article>
 				<p>
-					this is the <pre>{props?.articleContent || 'articles content 2'}</pre>
+					Article:
+					<pre>{props?.content || 'article content'}</pre>
 				</p>
 			</article>
 		</section>
