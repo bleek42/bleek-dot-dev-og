@@ -11,7 +11,12 @@ const initState = {
 const reducer = (state = initState, action) => {
   switch (action.type) {
     case 'REQUEST':
-      return { ...state, loading: true, error: false, msg: 'Requesting from data...' };
+      return {
+        ...state,
+        loading: true,
+        error: false,
+        msg: 'Sending request to server...',
+      };
     case 'SUCCESS':
       return {
         ...state,
@@ -27,7 +32,7 @@ const reducer = (state = initState, action) => {
 };
 
 export const useRequest = () => {
-  const [{ profile, loading, error }, dispatch] = useReducer(reducer, initState);
+  const [{ profile, loading, error, msg }, dispatch] = useReducer(reducer, initState);
   useEffect(() => {
     let ignore = false;
     (async () => {
@@ -38,7 +43,7 @@ export const useRequest = () => {
         const res = await fetch(API_URL, req);
         if (!res.ok) dispatch({ type: 'ERROR', payload: res.statusText });
         const data = await res.json();
-        if (!ignore) dispatch({ type: 'SUCCESS', payload: data });
+        if (!ignore && data) dispatch({ type: 'SUCCESS', payload: data });
       } catch {
         dispatch({ type: 'ERROR', payload: 'Internal Server Error' });
       }
@@ -48,5 +53,5 @@ export const useRequest = () => {
     };
   }, []);
 
-  return { profile, loading, error };
+  return { profile, loading, error, msg };
 };
