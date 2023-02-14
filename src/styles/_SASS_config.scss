@@ -1,0 +1,84 @@
+$bg-1: #108585;
+$bg-2: #1d5bc7;
+$color-1: #2be621;
+$color-2: #40a556;
+
+$def-bord: 4px solid black;
+$def-radi: 30% 25% / 10% 35%;
+$sec-radi: 20% 10% / 10% 20%;
+
+$head-font: birdman;
+$body-font: Oxanium;
+
+@mixin pad-query(
+	$top: null,
+	$right: null,
+	$bottom: null,
+	$left: null,
+	$media: null
+) {
+	@if $media {
+		@media #{$media} {
+			padding-top: $top;
+			padding-right: $right;
+			padding-bottom: $bottom;
+			padding-left: $left;
+		}
+	} @else {
+		padding-top: $top;
+		padding-right: $right;
+		padding-bottom: $bottom;
+		padding-left: $left;
+	}
+}
+
+@font-face {
+	font-family: Oxanium;
+	src: url(fonts/Oxanium/Oxanium-Bold.ttf);
+}
+
+@font-face {
+	font-family: birdman;
+	src: url(fonts/birdman/BIRDO___.TTF);
+}
+
+@mixin grid {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 2rem;
+}
+
+@mixin flex {
+	display: flex;
+	flex-flow: column;
+}
+
+@mixin nav-flex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+@mixin pad($top, $right, $bottom, $left) {
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
+}
+
+@mixin marg($top, $right, $bottom, $left) {
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
+}
+
+@mixin nav-bar {
+	position: fixed;
+	padding-left: 20px;
+	width: 400px;
+	z-index: 200;
+	left: -100%;
+	animation: slide-open 0.6s forwards;
+}

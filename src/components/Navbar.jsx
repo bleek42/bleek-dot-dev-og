@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { VscMenu, VscFoldUp } from "react-icons/vsc";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { VscMenu, VscFoldUp } from 'react-icons/vsc';
 
-import { NavbarData } from "./NavbarData";
-import "./Navbar.scss";
+import { NavbarData } from './Navbar/NavbarData';
+import './Navbar.scss';
 
-function Navbar() {
+export default function Navbar() {
 	const [toggle, setToggle] = useState(false);
 
 	const toggleMenu = () => {
@@ -20,13 +20,16 @@ function Navbar() {
 					{toggle ? <VscFoldUp /> : <VscMenu />}
 				</button>
 			</form>
-			<nav className={toggle ? "nav-open" : "nav-close"}>
+			<nav className={toggle ? 'nav-open' : 'nav-close'}>
 				<ul onMouseLeave={toggleMenu}>
 					{NavbarData.map((item, idx) => (
-						<li key={idx} className={item.className}>
+						<li
+							key={item?.id || idx}
+							id={`${item.title.toLowerCase()}-${item.id}`}
+							className="navbar-link">
 							<Link to={item.path}>
-								<span className="icon">{item.icon}</span>
-								<span className="title">{item.title}</span>
+								<i>{item.icon}</i>
+								<pre title={item.title}>{item.title}</pre>
 							</Link>
 						</li>
 					))}
@@ -35,5 +38,3 @@ function Navbar() {
 		</div>
 	);
 }
-
-export default Navbar;

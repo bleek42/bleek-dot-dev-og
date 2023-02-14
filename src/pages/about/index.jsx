@@ -1,5 +1,10 @@
-// import React from "react";
+import { useState, useEffect, Fragment } from 'react';
 
+export default function About(props = {}) {
+	console.log(props);
+
+	return <Fragment>{props?.children || null}</Fragment>;
+}
 
 // import "./About.scss";
 

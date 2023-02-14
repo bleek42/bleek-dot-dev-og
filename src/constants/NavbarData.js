@@ -4,27 +4,28 @@ import { RiBracesFill } from 'react-icons/ri';
 
 export const NavbarData = [
   {
+    id: 1,
     title: 'Home',
     path: '/',
-    icon: <RiBracesFill />,
-    className: 'home',
+    icon: <RiBracesFill />
   },
   {
+    id: 2,
     title: 'About',
     path: '/about',
     icon: <VscSymbolArray />,
-    className: 'about',
   },
   {
+    id: 3,
     title: 'Contact',
     path: '/contact',
     icon: <VscCommentDiscussion />,
-    className: 'contact',
   },
   {
+    id: 4,
     title: 'Projects',
     path: '/projects',
     icon: <VscCode />,
-    className: 'projects',
   },
 ];
+
