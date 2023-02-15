@@ -1,7 +1,7 @@
 import Header from 'src/components/Header';
 import Section from 'src/components/Section';
 
-import './Projects.scss';
+import 'src/styles/projects.module.scss';
 import screenshot1 from '../../images/quiz-app.png';
 import screenshot2 from '../../images/quiz-app2.png';
 import screenshot3 from '../../images/bookmarks-app.png';

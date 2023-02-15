@@ -13,9 +13,7 @@ export default function Home() {
 				id="home-sect-0"
 				name="home"
 				content="Welcome to bleek.dev! My name is Brandon Leek and I'm a full-stack
-			web developer. This site was created with React.js and features React
-			Hooks, React Router, React Icons, SASS/SCSS stylesheets, and unit
-			testing with Jest & Enzyme."
+			web developer & tech enthusiast. This site is built with React.js in conjunction with other modern solutions including (but never limited to!) custom state management hooks, React Router, React Icons, Syntactically Awesome Style Sheets (SASS/SCSS), and test suites written with Jest & Enzyme."
 			/>
 			<Footer />
 		</Fragment>
