@@ -48,18 +48,16 @@ import { useId } from 'react';
 // 	);
 // }
 
-export default function Section({ id, name, content }) {
+export default function Section({ id, name, content, icon }) {
 	return (
 		<section
-			id={`sect-${id}` || 'sect-0'}
+			id={id || 'sect-0'}
 			className="sect-comp flex-col">
 			<span>
 				<h3>
 					You are in the<pre>{name || 'unknown'}</pre>section!
 				</h3>
-				<i>
-					<VscSymbolArray />
-				</i>
+				{icon ? <i>{icon}</i> : <p>No Icon Prop</p>}
 			</span>
 			<article>
 				<p>

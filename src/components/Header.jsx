@@ -1,16 +1,18 @@
 import { navLinks } from 'src/constants/nav-links';
 import Navbar from './Navbar';
 
-export default function Header(props = {}) {
+export default function Header({ id, name, content, icon }) {
 	console.log('header:', props);
 
 	return (
-		<header>
+		<header id={id || 'unknown-hedr'}>
+			{icon && <i>{icon}</i>}
 			<h1>Brandon Leek</h1>
 			<h2>bleek.dev</h2>
 			<Navbar links={navLinks} />
 			<span className="page-header">
-				<h6>{props?.page || 'Untitled Page'}</h6>
+				<h6>{name || 'unknown header'}</h6>
+				<p>{content || 'no header content'} </p>
 			</span>
 		</header>
 	);

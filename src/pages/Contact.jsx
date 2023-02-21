@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { VscCommentDiscussion } from 'react-icons/vsc';
 import { GrLinkedin } from 'react-icons/gr';
 import { FiGithub } from 'react-icons/fi';
 
+import Header from '../components/Header';
+import Section from '../components/Section';
 import { useRequest } from '../hooks/useRequest';
 import './Contact.scss';
+import Footer from '../components/Footer';
 
 export default function Contact() {
 	const { profile, loading, error, msg } = useRequest();
 
 	return (
-		<div className="contact">
-			<header>
+		<Fragment>
+			{/* <header>
 				<h4>{<VscCommentDiscussion />} Contact</h4>
 				<p>
 					Whether you're about to make me an offer I can't refuse, thinking
@@ -19,8 +22,50 @@ export default function Contact() {
 					connect if you're taking the time to read this! Please reach out on
 					LinkedIn or GitHub.
 				</p>
-			</header>
-			<section className="linkedin">
+			</header> */}
+			<Header
+				id="contact-hedr"
+				page="Contact"
+				content=""
+				icon={null}
+			/>
+			{loading && (
+				<div className="loading">
+					<progress>loading...</progress>
+				</div>
+			)}
+			{!loading && !error && (
+				<Fragment>
+					<Section
+						id="contact-sect-1"
+						name="contact_section_email"
+						content=""
+						icon={null}
+					/>
+					<Section
+						id="contact-sect-2"
+						name="contact_section_linkedin"
+						content=""
+						icon={null}
+					/>
+					<Section
+						id="contact-sect-3"
+						name="contact_section_github"
+						content=""
+						icon={null}
+					/>
+				</Fragment>
+			)}
+			{error && (
+				<div className="error">
+					<p>
+						Error fetching profile data:{' '}
+						{msg?.toString() || 'an unknown error occurred...'}
+					</p>
+				</div>
+			)}
+			<Footer />
+			{/* <section className="linkedin">
 				<h4>{<GrLinkedin />} LinkedIn</h4>
 				<a
 					id="my-linkedin"
@@ -48,7 +93,7 @@ export default function Contact() {
 					</ul>
 				)}
 				{error && <p>Error fetching profile data: {msg.toString()}</p>}
-			</section>
-		</div>
+			</section> */}
+		</Fragment>
 	);
 }

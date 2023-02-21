@@ -5,12 +5,17 @@ import Section from 'src/components/Section';
 import Footer from 'src/components/Footer';
 
 export default function About(props = {}) {
-	console.log(props);
+	console.log('about page:', props);
 
 	return (
 		<Fragment>
-			<Header />
-			<Section />
+			<Header id="hedr-about" />
+			<Section
+				id="about-sect-1"
+				name="about_section"
+				content=""
+				icon={null}
+			/>
 			<Footer />
 		</Fragment>
 	);
