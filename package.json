@@ -2,8 +2,11 @@
 	"name": "bleek-react-portfolio",
 	"version": "0.1.0",
 	"private": true,
-	"main": "src",
-	"homepage": "/",
+	"main": "src/index.jsx",
+	"homepage": "https://bleek.dev",
+	"repository": {
+		"url": "https://github.com/bleek42/bleek-dot-dev-og"
+	},
 	"dependencies": {
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "13.4.0",
@@ -23,7 +26,7 @@
 		"eject": "react-scripts eject"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.20.12",
+		"@babel/core": "^7.21.0",
 		"@babel/plugin-syntax-flow": "7.14.5",
 		"@babel/plugin-transform-react-jsx": "7.14.9",
 		"@testing-library/dom": "^8.20.0",

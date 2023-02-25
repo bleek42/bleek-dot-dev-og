@@ -1,4 +1,4 @@
-@import '../../SASS_config';
+@import './SASS_config';
 
 .home {
 	@include flex;
@@ -7,6 +7,7 @@
 
 	header {
 		background-color: #159b9bb0;
+    display: inline-flex;
 		font-family: $head-font;
 		border: $def-bord;
 		border-radius: $def-radi;
@@ -25,13 +26,13 @@
 	}
 
 	section {
-		@include flex;
+		@include flex-row-wrap;
 		@include marg(30px, 2px, 2px, 4px);
 		@include pad(4px, 3px, 3px, 4px);
 		font-family: $body-font;
 		border: $def-bord;
 		border-radius: $sec-radi;
-		background-color: #159b9bb0;
+		background-color: $bg-color-1;
 
 		p {
 			color: black;

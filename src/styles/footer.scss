@@ -1,0 +1,19 @@
+@import './SASS_config';
+
+footer {
+  @include flex-cont-inline;
+  background-color: $bg-color-1;
+  border: $def-bord;
+  border-radius: $def-radi;
+  margin: 3px 3px auto;
+  padding: 4px 4px;
+
+  i {
+    flex: auto;
+  }
+
+  pre {
+    flex: auto;
+    font-family: $body-font;
+  }
+}

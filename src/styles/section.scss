@@ -1,0 +1,63 @@
+@import './SASS_config';
+
+$sm-screen: 'only screen and (max-width: 740px)';
+$lg-screen: 'only screen and (min-width: 900px)';
+
+.section-comp {
+  @include flex-cont;
+  justify-content: center;
+
+  section {
+    background-color: #159b9bb0;
+    border: $def-bord;
+    border-radius: $sec-radi;
+
+    span {
+      flex-flow: row wrap;
+      border: 2px solid #14ebce;
+      margin: 2px auto;
+      padding: 4px 2px 2px 4px;
+      background-color: #145d99;
+
+      h3 {
+        @include inline-flex-item;
+      }
+
+      i {
+        @include inline-flex-item;
+      }
+
+      p {
+        @include inline-flex-item;
+      }
+    }
+
+    article {
+      // display: flex;
+      // justify-content: flex-start;
+      // flex-flow: row wrap;
+      // align-items: center;
+      @include inline-flex-item;
+      border: 3px solid black;
+      border-radius: $def-bord;
+      margin: 4px auto;
+      padding: 4px 2px 2px 4px;
+
+      h3 {
+        color: rgb(82, 201, 214);
+        font-family: 'CodeNewRoman NF';
+        font-weight: 700;
+        text-shadow: 3px 2px rgb(120, 113, 113);
+      }
+
+      p {
+        font-family: $body-font;
+        text-decoration: underline;
+      }
+
+      code {
+        background-color: grayscale($color: #baa5a5);
+      }
+    }
+  }
+}

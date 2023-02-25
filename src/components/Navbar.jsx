@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { VscMenu, VscFoldUp } from 'react-icons/vsc';
 
-import 'src/styles/navbar.module.scss';
+import '../styles/navbar.scss';
 
 export default function Navbar({ links }) {
 	const [toggle, setToggle] = useState(false);
 
-	const toggleMenu = () => setToggle(!toggle);
+	const toggleMenu = () => setToggle(!!toggle);
 
 	return (
 		<div>
