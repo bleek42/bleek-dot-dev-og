@@ -1,10 +1,16 @@
 @import '../vars/index.scss';
 
+@mixin flex-cont-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 65%;
+}
+
 @mixin xterm-grid {
   display: grid;
-  grid-template-columns: auto;
-  grid-gap: 2rem;
-  box-sizing: border-box;
+  grid-template-rows: 1fr 3fr auto;
 }
 
 @mixin flex-cont-row {

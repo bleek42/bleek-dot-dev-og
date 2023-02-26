@@ -1,44 +1,108 @@
 @import './vars/index.scss';
 @import './mixins/index.scss';
 
-#xterm-container {
-  @include xterm-grid;
-  background-color: $rgb-blak;
-  height: 1000px;
-  min-height: 50%;
-  width: 800px;
-  min-width: 30%;
-  border: $thin;
-  border-radius: $radi-1;
+main {
+  box-sizing: border-box;
+  background-color: linear-gradient(45deg, $rgb-blak 0%, $rgb-neon 100%);
+  margin: 0;
+  padding: 0;
 
-  #shebang {
-    font-family: $birdman;
-    color: $rgb-red;
-    font-size: 32px;
-    font-weight: 650;
-    text-align: left;
-    text-decoration: underline;
-    text-decoration-color: $rgb-steel;
+  #xterm-container {
+    @include xterm-grid;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.404);
+    border: $thin;
+    border-radius: $radi-1;
+    margin: 4px 2px 2px 4px;
+    padding: 3px 2px 2px 3px;
+    height: 110vh;
+    min-height: 50%;
+    width: 75vh;
+    min-width: 30%;
+
+    #xterm-top {
+      @include inline-flex-item;
+      width: 100%;
+      height: 30px;
+      padding: 0 10px;
+      background: linear-gradient(rgb(80, 75, 69) 0%, rgb(60, 59, 55) 100%);
+
+      #xterm-btns {
+        flex: 1 1 1 0;
+        margin-right: 5px;
+        font-size: 8px;
+        height: 12px;
+        width: 12px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 100%;
+        background: linear-gradient(#7d7871 0%, #595953 100%);
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 0px 1px 0px #41403a, 0px 1px 1px 0px #474642;
+
+        #xterm-close {
+          background-color: linear-gradient($rgb-red 0%, $rgb-orange 100%);
+          background-clip: padding-box;
+
+          &::hover {
+            filter: brightness(2);
+            color: rgba(233, 62, 56, 0.616);
+          }
+        }
+
+        #xterm-maxmz {
+          background-color: linear-gradient($rgb-bgblu 0%, $rgb-steel 100%);
+          background-clip: padding-box;
+
+          &::hover {
+            filter: brightness(2);
+            color: rgba(65, 67, 190, 0.616);
+          }
+        }
+
+        #xterm-minmz {
+          background-color: linear-gradient($rgb-bgdteal 0%, $rgb-drab 100%);
+          background-clip: padding-box;
+
+          &::hover {
+            filter: brightness(2);
+            color: rgba(29, 231, 22, 0.616);
+          }
+        }
+      }
+    }
+
+    #xterm-shell {
+      #xterm-shebang {
+        font-family: $birdman;
+        color: $rgb-red;
+        font-size: 32px;
+        font-weight: 650;
+        text-align: left;
+        text-decoration: underline;
+        text-decoration-color: $rgb-steel;
+      }
+
+      #prompt {
+        font-family: $MonocraftNF;
+        color: $rgb-green;
+        font-size: 24px;
+        font-weight: 550;
+        text-align: center;
+
+        code {
+          color: $rgb-steel;
+          font-size: 18px;
+          font-weight: 550;
+        }
+      }
+
+      .xterm-txt {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: #66cc00;
+        font-size: 20px;
+      }
+    }
   }
-
-  #prompt {
-    font-family: $MonocraftNF;
-    color: $rgb-green;
-    font-size: 24px;
-    font-weight: 550;
-    text-align: center;
-  }
-
-  .xterm-row {
-    text-align: left;
-  }
-
-
-  code {
-    color: $rgb-steel;
-    font-size: 18px;
-    font-weight: 550;
-  }
-
-
 }

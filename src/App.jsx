@@ -5,19 +5,32 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './page/Contact';
+import Landing from './pages/Landing';
 
 export default function App() {
 	return (
 		<Fragment>
-			<Router>
-				<Switch>
-					<Route exact path="/" component={Home}></Route>
-					<Route path="/about" component={About}></Route>
-					<Route path="/projects" component={Projects}></Route>
-					<Route path="/contact" component={Contact}></Route>
-				</Switch>
-			</Router>
+			<Landing />
 		</Fragment>
+
+		// <Fragment>
+		// 	<Router>
+		// 		<Switch>
+		// 			<Route
+		// 				path="/home"
+		// 				component={Home}></Route>
+		// 			<Route
+		// 				path="/about"
+		// 				component={About}></Route>
+		// 			<Route
+		// 				path="/projects"
+		// 				component={Projects}></Route>
+		// 			<Route
+		// 				path="/contact"
+		// 				component={Contact}></Route>
+		// 		</Switch>
+		// 	</Router>
+		// </Fragment>
 	);
 }
 
