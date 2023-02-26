@@ -1,15 +1,22 @@
-import React from 'react';
+import 'src/styles/Xterm.scss';
 
 export default function XTerm() {
 	return (
 		<main id="xterm-container">
-			<span className="xterm-row">
+			<span
+				className="xterm-row"
+				id="shebang">
 				<code>#!/usr/bin/env bleek</code>
 			</span>
 			<span
 				className="xterm-row"
+				id="prompt">
+				<code>{'>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'}</code>
+			</span>
+			<span
+				className="xterm-row"
 				id="row-1">
-				<code>${'>>'}</code>
+				<code>{'>'}</code>
 			</span>
 			<span
 				className="xterm-row"
@@ -53,7 +60,7 @@ export default function XTerm() {
 			</span>
 			<span
 				className="xterm-row"
-				id="row-10">
+				id="row-9">
 				<code>{'>'}</code>
 			</span>
 		</main>

@@ -1,4 +1,5 @@
-@import '../../SASS_config';
+@import './vars/index.scss';
+@import './mixins/index.scss';
 
 div {
 	@include flex-cont-row;

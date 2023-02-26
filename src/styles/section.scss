@@ -1,63 +1,84 @@
-@import './SASS_config';
+@import './vars/index.scss';
+@import './mixins/index.scss';
 
-$sm-screen: 'only screen and (max-width: 740px)';
-$lg-screen: 'only screen and (min-width: 900px)';
-
-.section-comp {
+section {
   @include flex-cont;
-  justify-content: center;
+  background-color: #159b9bb0;
+  border: $dense;
+  border-radius: $sec-radi;
 
-  section {
-    background-color: #159b9bb0;
-    border: $def-bord;
-    border-radius: $sec-radi;
+  span {
+    @include inline-flex-item;
+    text-align: center;
+    border: 2px solid #14ebce;
+    margin: 2px auto;
+    padding: 4px 2px 2px 4px;
+    background-color: $rgb-bgblu;
 
-    span {
-      flex-flow: row wrap;
-      border: 2px solid #14ebce;
-      margin: 2px auto;
-      padding: 4px 2px 2px 4px;
-      background-color: #145d99;
-
-      h3 {
-        @include inline-flex-item;
-      }
-
-      i {
-        @include inline-flex-item;
-      }
-
-      p {
-        @include inline-flex-item;
-      }
+    h3 {
+      font-family: $MonocraftNF;
+      color: $rgb-purp;
+      text-shadow: $shade-1;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: $rgb-cy;
     }
 
-    article {
-      // display: flex;
-      // justify-content: flex-start;
-      // flex-flow: row wrap;
-      // align-items: center;
-      @include inline-flex-item;
-      border: 3px solid black;
-      border-radius: $def-bord;
-      margin: 4px auto;
-      padding: 4px 2px 2px 4px;
+    p {
+      font-weight: 250;
+      color: $rgb-drab;
+      text-shadow: $rgb-neon 1px 0 10px;
+    }
 
-      h3 {
-        color: rgb(82, 201, 214);
-        font-family: 'CodeNewRoman NF';
-        font-weight: 700;
-        text-shadow: 3px 2px rgb(120, 113, 113);
-      }
+    i {
+      font-family: $MonocraftNF;
+      font-weight: 700;
+      color: $rgb-cy;
+      flex: 1 0 auto;
+    }
+  }
 
-      p {
-        font-family: $body-font;
-        text-decoration: underline;
-      }
+  article {
+    // display: flex;
+    // justify-content: flex-start;
+    // flex-flow: row wrap;
+    // align-items: center;
+    @include flex-cont-inl;
+    border: $thin;
+    border-radius: $radi-2;
+    margin: 4px 4px auto;
+    padding: 4px 2px 2px 4px;
+    text-align: center;
+    font-family: $Oxanium;
+    background-color: $rgb-bggradi;
 
-      code {
-        background-color: grayscale($color: #baa5a5);
-      }
+    // h3 {
+    //   font-family: $MonocraftNF;
+    //   color: $rgb-purp;
+    //   text-shadow: $txt-shade-1;
+    //   font-weight: 700;
+    //   text-decoration: underline;
+    //   text-decoration-color: $rgb-teal;
+    // }
+
+    pre {
+      font-weight: 275;
+      text-shadow: $txt-shade-3;
+      color: $rgb-drab;
+    }
+
+    p {
+      font-weight: 250;
+      color: $rgb-blak;
+      text-shadow: $txt-shade-3;
+    }
+
+    code {
+      font-family: $MonocraftNF;
+      color: $rgb-neon;
+      font-weight: 300;
+      text-shadow: $txt-shade-2;
+      // flex: auto;
     }
   }
 }

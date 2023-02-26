@@ -1,0 +1,44 @@
+@import './vars/index.scss';
+@import './mixins/index.scss';
+
+#xterm-container {
+  @include xterm-grid;
+  background-color: $rgb-blak;
+  height: 1000px;
+  min-height: 50%;
+  width: 800px;
+  min-width: 30%;
+  border: $thin;
+  border-radius: $radi-1;
+
+  #shebang {
+    font-family: $birdman;
+    color: $rgb-red;
+    font-size: 32px;
+    font-weight: 650;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: $rgb-steel;
+  }
+
+  #prompt {
+    font-family: $MonocraftNF;
+    color: $rgb-green;
+    font-size: 24px;
+    font-weight: 550;
+    text-align: center;
+  }
+
+  .xterm-row {
+    text-align: left;
+  }
+
+
+  code {
+    color: $rgb-steel;
+    font-size: 18px;
+    font-weight: 550;
+  }
+
+
+}

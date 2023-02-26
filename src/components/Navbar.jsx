@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { VscMenu, VscFoldUp } from 'react-icons/vsc';
 
-import '../styles/navbar.scss';
+import 'src/styles/Navbar.scss';
 
 export default function Navbar({ links }) {
 	const [toggle, setToggle] = useState(false);

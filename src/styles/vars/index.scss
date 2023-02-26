@@ -1,0 +1,55 @@
+/* !
+!!! COLOR SCHEME
+  */
+// ^ backgrounds: main, containers, etc.
+$rgb-bgdteal: rgb(16, 133, 133);
+$rgb-bgblu: rgb(29, 91, 199);
+// ? gonna mess with gradients
+$rgb-bggradi: linear-gradient(45deg, rgb(61, 124, 207), rgb(17, 179, 163));
+
+// ^ text, border, details, etc.
+$rgb-green: rgb(43, 230, 33);
+$rgb-purp: rgb(161, 85, 233);
+$rgb-drab: rgb(64, 165, 86);
+$rgb-steel: rgb(69, 66, 66);
+$rgb-cy: rgb(11, 205, 163);
+$rgb-tan: rgb(176, 176, 165);
+$rgb-blak: rgb(0, 0, 0);
+$rgb-neon: rgb(136, 255, 0);
+$rgb-red: rgb(214, 30, 30);
+
+// ^ text decorations, shadows, etc
+$shade-1: $rgb-steel 4px 0 4px;
+$shade-2: $rgb-blak 2px 1px 2px ;
+$shade-3: $rgb-teal 1px 0 10px;
+
+
+@font-face {
+  font-family: Oxanium;
+  src: url(fonts/Oxanium/Oxanium-Bold.ttf);
+}
+
+@font-face {
+  font-family: birdman;
+  src: url(fonts/birdman/BIRDO___.TTF);
+}
+
+@font-face {
+  font-family: MonocraftNF;
+  src: url(fonts/MonocraftNF/Monocraft-nerd-fonts-patched.ttf);
+}
+
+// ^ fonts, nerd font icons with monocraftnf
+$birdman: birdman; // ?  large text
+$Oxanium: Oxanium; // ? content/body text
+$MonocraftNF: MonocraftNF; // ? use for unicode icons, term, or anything really
+
+// ^ border outlines, radius, etc.
+$dense: 4px solid $rgb-blak;
+$thin: 2px solid $rgb-neon;
+$radi-1: 30% 25% / 10% 35%;
+$radi-2: 20% 10% / 10% 20%;
+
+// ^ vars for dynamic media queries
+$cellphone: 'only screen and (min-width: 740px)';
+$desktop: 'only screen and (min-width: 900px)';

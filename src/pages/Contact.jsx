@@ -5,9 +5,9 @@ import { FiGithub } from 'react-icons/fi';
 
 import Header from '../components/Header';
 import Section from '../components/Section';
-import { useRequest } from '../hooks/useRequest';
-import './Contact.scss';
 import Footer from '../components/Footer';
+
+import { useRequest } from '../hooks/useRequest';
 
 export default function Contact() {
 	const { profile, loading, error, msg } = useRequest();
@@ -34,36 +34,38 @@ export default function Contact() {
 					<progress>loading...</progress>
 				</div>
 			)}
-			{!loading && !error && (
-				<Fragment>
-					<Section
-						id="contact-sect-1"
-						name="contact_section_email"
-						content=""
-						icon={null}
-					/>
-					<Section
-						id="contact-sect-2"
-						name="contact_section_linkedin"
-						content=""
-						icon={null}
-					/>
-					<Section
-						id="contact-sect-3"
-						name="contact_section_github"
-						content=""
-						icon={null}
-					/>
-				</Fragment>
-			)}
-			{error && (
-				<div className="error">
-					<p>
-						Error fetching profile data:{' '}
-						{msg?.toString() || 'an unknown error occurred...'}
-					</p>
-				</div>
-			)}
+			<main>
+				{!loading && !error && (
+					<>
+						<Section
+							id="contact-sect-1"
+							name="contact_section_email"
+							content=""
+							icon={null}
+						/>
+						<Section
+							id="contact-sect-2"
+							name="contact_section_linkedin"
+							content=""
+							icon={null}
+						/>
+						<Section
+							id="contact-sect-3"
+							name="contact_section_github"
+							content=""
+							icon={null}
+						/>
+					</>
+				)}
+				{error && (
+					<div className="error">
+						<p>
+							Error fetching profile data:{' '}
+							{msg?.toString() || 'an unknown error occurred...'}
+						</p>
+					</div>
+				)}
+			</main>
 			<Footer />
 			{/* <section className="linkedin">
 				<h4>{<GrLinkedin />} LinkedIn</h4>

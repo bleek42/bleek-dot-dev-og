@@ -1,4 +1,5 @@
-@import './SASS_config';
+@import './vars/index.scss';
+@import './mixins/index.scss';
 
 footer {
   @include flex-cont-inline;

@@ -1,11 +1,13 @@
-import { navLinks } from 'src/constants/nav-links';
 import Navbar from './Navbar';
+import { navLinks } from 'src/constants/nav-links';
+
+import '../styles/Header.scss';
 
 export default function Header({ id, name, content, icon }) {
 	console.log('header:', props);
 
 	return (
-		<header id={id || 'unknown-hedr'}>
+		<header id={id ? `hedr-${id}` : 'hedr-0'}>
 			{icon && <i>{icon}</i>}
 			<h1>Brandon Leek</h1>
 			<h2>bleek.dev</h2>
