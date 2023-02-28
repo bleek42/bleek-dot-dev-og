@@ -22,12 +22,15 @@ $colors: (
 
 // ^ backgraunds for containers, wrappers, etc.
 $bgcolors: (
-  "cyan": map.get($colors, "cyan"),
+  "cyan": rgb(11, 205, 163),
   "blue": rgb(12, 95, 151),
   "green": rgb(43, 230, 33),
+  "drab": rgb(38, 136, 59),
   "steel": rgb(69, 66, 66),
+  "black": rgb(0, 0, 0),
   "steel-blue": linear-gradient(65deg, rgb(69, 66, 66),  rgb(12, 95, 151)),
-  "green-cyan": linear-gradient(65deg, rgb(43, 230, 33),rgb(11, 205, 163))
+  "green-cyan": linear-gradient(65deg, rgb(43, 230, 33),rgb(11, 205, 163)),
+  "black-steel": linear-gradient(65deg, rgb(0, 0, 0), rgb(69, 66, 66))
 );
 
 
@@ -39,17 +42,17 @@ $shade-3: map.get($colors, "drab") 1px 0 10px;
 
 @font-face {
   font-family: Oxanium;
-  src: url(fonts/Oxanium/Oxanium-Bold.ttf);
+  src: url("../../fonts/Oxanium/Oxanium-Regular.ttf");
 }
 
 @font-face {
   font-family: birdman;
-  src: url(fonts/birdman/BIRDO___.TTF);
+  src: url("../../fonts/birdman/BIRDMAN_.TTF");
 }
 
 @font-face {
   font-family: MonocraftNF;
-  src: url(fonts/MonocraftNF/Monocraft-nerd-fonts-patched.ttf);
+  src: url("../../fonts/Monocraft-NerdFont/Monocraft-nerd-fonts-patched.ttf");
 }
 
 // ^ fonts, nerd font icons with monocraftnf

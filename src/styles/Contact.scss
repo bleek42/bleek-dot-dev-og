@@ -1,101 +1,95 @@
-@import "../../SASS_config";
+@use "sass:map";
+
+@import "./vars/index.scss";
+@import "./mixins/index.scss";
 
 .contact {
-	@include flex;
+	@include flex-col;
 
 	header {
 		background-color: #159b9bb0;
-		border: $def-bord;
-		border-radius: $def-radi;
+		border: $dense;
+		border-radius: $radi-1;
 		text-align: center;
 
 		h4 {
 			text-shadow: 3px 2px black;
 			letter-spacing: 2px;
-			font-family: $head-font;
-			color: $color-1;
+			font-family: $birdman;
+			color: map.get($colors, "green");
 			font-size: 30px;
 		}
 
 		p {
-			font-family: $body-font;
+			font-family: $Oxanium;
 			font-size: 20px;
 			padding-bottom: 20px;
 		}
 	}
 
 	.linkedin {
-		@include marg(10px, 4px, 4px, 10px);
-		@include pad(10px, 3px, 3x, 10x);
-		background-color: #159b9bb0;
+		background-color: map-get($bgcolors, "green-cyan");
 		text-align: center;
-		border: $def-bord;
-		border-radius: $def-radi;
+		border: $thin;
+		border-radius: $radi-2;
 
 		h4 {
 			letter-spacing: 2px;
-			font-family: $head-font;
-			font-size: 30px;
-			color: $color-1;
+			color: map.get($colors, "cyan");
 			text-shadow: 3px 2px black;
 		}
 
 		#my-linkedin {
-			font-family: $body-font;
 			transition: filter 500ms;
 
 			&:before {
-				color: blue;
+				color: map.get($colors, "cyan");
 			}
 
 			&:hover {
 				filter: brightness(3);
-				color: #831b83;
+				color: map.get($colors, "purple");
 			}
 
 			&:after {
-				color: #831b83;
+				color: map.get($colors, "purple");
 			}
 		}
 	}
 
 	.github {
-		@include marg(10px, 4px, 4px, 10px);
-		@include pad(10px, 3px, 3x, 10x);
-		background-color: #159b9bb0;
+		background-color: map.get($bgcolors, "steel-blue");
 		text-align: center;
-		border: $def-bord;
-		border-radius: $def-radi;
+		border: $thin;
+		border-radius: $radi-1;
 
 		h4 {
 			text-shadow: 3px 2px black;
 			letter-spacing: 2px;
-			font-family: $head-font;
 			font-size: 30px;
 			letter-spacing: 2px;
-			color: $color-1;
+			color: map.get($colors, "cyan")1;
 		}
 
 		#my-github {
-			font-family: $body-font;
 			transition: filter 500ms;
 
 			&:before {
-				color: blue;
+				color: map.get($colors, "cyan")e;
 			}
 
 			&:hover {
 				filter: brightness(3);
-				color: #831b83;
+				color: map.get($colors, "purple");
 			}
 
 			&:after {
-				color: #831b83;
+				color: map.get($colors, "purple]");
 			}
 		}
 
 		ul {
-			font-family: $body-font;
+			font-family: $MonocraftNF;
 			font-weight: 20px;
 
 			li {

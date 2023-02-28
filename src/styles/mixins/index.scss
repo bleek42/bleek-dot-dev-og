@@ -1,4 +1,5 @@
 @use "sass:map";
+
 @import '../vars/index.scss';
 
 
@@ -42,7 +43,7 @@
   font-style: oblique;
   font-weight: 650;
   color: map.get($colors, "green");
-  text-shadow: $txt-shade-1;
+  text-shadow: $shade-1;
   text-decoration: underline;
   text-decoration-color: map.get($colors, "steel");
   text-rendering: optimizeLegibility;
@@ -54,7 +55,7 @@
   font-family: $MonocraftNF;
   font-weight: 525;
   color: map.get($colors, "drab");
-  text-shadow: $txt-shade-2;
+  text-shadow: $shade-2;
   text-decoration: solid;
   text-decoration-color: map.get($colors,  "steel");
   text-rendering: optimizeLegibility;
@@ -64,18 +65,15 @@
 @mixin txt-section {
   font-family: $MonocraftNF;
   color: map.get($colors , "neon");
-  text-shadow: $txt-shade-2;
+  text-shadow: $shade-2;
   font-weight: 325;
   text-align: left;
 }
 
-@mixin pad-query($top: null, $right: null, $bottom: null, $left: null, $media: null) {
+@mixin pad-query($top: 1em, $right: 1em, $bottom: 1em, $left: 1em, $media: "mobile") {
   @if $media {
     @media #{$media} {
-      padding-top: $top;
-      padding-right: $right;
-      padding-bottom: $bottom;
-      padding-left: $left;
+      padding: $top, $right, $bottom, $left;
     }
   } @else {
     padding-top: $top;
