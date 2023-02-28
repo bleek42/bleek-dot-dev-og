@@ -1,9 +1,12 @@
+@use "sass:map";
+
 @import './vars/index.scss';
 @import './mixins/index.scss';
 
 header {
-  @include flex-cont-inline;
-  background-color: $rgb-bgteal;
+  @include flex-inline;
+  font-family: $birdman;
+  background-color: map.get($bgcolors, "steel-cyan");
   text-align: left;
   border: $dense;
   border-radius: $radi-1;
@@ -13,7 +16,7 @@ header {
   i {
     font-family: $MonocraftNF;
     font-weight: 700;
-    color: $rgb-bgdteal;
+    color: map.get($colors , "neon");
     flex: 1 0 auto;
   }
 
@@ -28,18 +31,19 @@ header {
   }
 
   span.page-header {
+    font-family: $Oxanium;
     flex: 0 1 auto;
     text-align: right;
 
     h6 {
       @include txt-header;
-      color: $rgb-teal;
+      color: map.get($colors , "teal");
       font-weight: 500;
-      text-shadow: $txt-shade-2;
+      text-shadow: $shade-2;
     }
 
     p {
-      color: $rgb-steel;
+      color: map.get($colors , "steel");
       font-family: $MonocraftNF;
       font-weight: 300;
     }

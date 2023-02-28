@@ -1,5 +1,5 @@
 import Navbar from './Navbar';
-import { navLinks } from 'src/constants/nav-links';
+import { navLinks } from '../constants/nav-links';
 
 import '../styles/Header.scss';
 

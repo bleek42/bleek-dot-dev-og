@@ -1,25 +1,29 @@
+@use "sass:map";
 @import '../vars/index.scss';
 
-@mixin flex-cont-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  min-height: 65%;
-}
 
 @mixin xterm-grid {
   display: grid;
   grid-template-rows: 1fr 3fr auto;
 }
 
-@mixin flex-cont-row {
+@mixin flex-col {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 65%;
+}
+
+@mixin flex-row {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
   align-items: center;
 }
 
-@mixin flex-cont-inl {
+@mixin flex-inline {
   display: inline-flex;
   flex-flow: row wrap;
 }
@@ -37,29 +41,29 @@
   font-family: $birdman;
   font-style: oblique;
   font-weight: 650;
-  color: $rgb-green;
+  color: map.get($colors, "green");
   text-shadow: $txt-shade-1;
   text-decoration: underline;
-  text-decoration-color: $rgb-steel;
+  text-decoration-color: map.get($colors, "steel");
   text-rendering: optimizeLegibility;
   text-decoration-style: double;
   text-decoration-thickness: 300;
 }
 
 @mixin txt-bleek {
-  font-family: $monocraft;
+  font-family: $MonocraftNF;
   font-weight: 525;
-  color: $rgb-neon;
+  color: map.get($colors, "drab");
   text-shadow: $txt-shade-2;
   text-decoration: solid;
-  text-decoration-color: $rgb-steel;
+  text-decoration-color: map.get($colors,  "steel");
   text-rendering: optimizeLegibility;
   text-decoration-thickness: 300;
 }
 
 @mixin txt-section {
   font-family: $MonocraftNF;
-  color: $rgb-neon;
+  color: map.get($colors , "neon");
   text-shadow: $txt-shade-2;
   font-weight: 325;
   text-align: left;

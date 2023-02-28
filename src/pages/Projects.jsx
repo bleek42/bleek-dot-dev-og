@@ -1,16 +1,16 @@
+import { Fragment } from 'react';
+
 import Header from '../components/Header';
 import Section from '../components/Section';
-import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import 'src/styles/projects.module.scss';
-import screenshot1 from '../../images/quiz-app.png';
-import screenshot2 from '../../images/quiz-app2.png';
-import screenshot3 from '../../images/bookmarks-app.png';
-import screenshot4 from '../../images/covid19.jpg';
-import screenshot5 from '../../images/sirilla-learning.jpg';
-import screenshot6 from '../../images/trouvaille-1.jpg';
-import screenshot7 from '../../images/trouvaille-2.jpg';
-import { Fragment } from 'react';
+// import screenshot1 from '../../images/quiz-app.png';
+// import screenshot2 from '../../images/quiz-app2.png';
+// import screenshot3 from '../../images/bookmarks-app.png';
+// import screenshot4 from '../../images/covid19.jpg';
+// import screenshot5 from '../../images/sirilla-learning.jpg';
+// import screenshot6 from '../../images/trouvaille-1.jpg';
+// import screenshot7 from '../../images/trouvaille-2.jpg';
 
 export default function Projects() {
 	return (

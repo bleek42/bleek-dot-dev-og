@@ -1,8 +1,8 @@
 import { useState, useEffect, Fragment } from 'react';
 
-import Header from 'src/components/Header';
-import Section from 'src/components/Section';
-import Footer from 'src/components/Footer';
+import Header from '../components/Header';
+import Section from '../components/Section';
+import Footer from '../components/Footer';
 
 export default function About(props = {}) {
 	console.log('about page:', props);

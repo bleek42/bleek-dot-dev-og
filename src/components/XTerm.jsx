@@ -1,4 +1,4 @@
-import 'src/styles/Xterm.scss';
+import '../styles/XTerm.scss';
 
 export default function XTerm({ cols, rows }) {
 	return (

@@ -1,39 +1,41 @@
+@use "sass:map";
+
 @import './vars/index.scss';
 @import './mixins/index.scss';
 
 section {
-  @include flex-cont;
-  background-color: #159b9bb0;
+  @include flex-col;
+  background-color: map.get($bgcolors, "steel-blue");
   border: $dense;
   border-radius: $sec-radi;
 
   span {
-    @include inline-flex-item;
+    @include flex-inline;
     text-align: center;
-    border: 2px solid #14ebce;
+    border: 2px solid map.get($colors, "neon");
     margin: 2px auto;
     padding: 4px 2px 2px 4px;
-    background-color: $rgb-bgblu;
+    background-color: map.get($bgcolors, "green-cyan");
 
     h3 {
       font-family: $MonocraftNF;
-      color: $rgb-purp;
+      color: map.get($colors, "green");
       text-shadow: $shade-1;
       font-weight: 700;
       text-decoration: underline;
-      text-decoration-color: $rgb-cy;
+      text-decoration-color: map.get($colors, "cyan");
     }
 
     p {
       font-weight: 250;
-      color: $rgb-drab;
-      text-shadow: $rgb-neon 1px 0 10px;
+      color: map.get($colors, "steel");
+      text-shadow: $shade-3;
     }
 
     i {
       font-family: $MonocraftNF;
       font-weight: 700;
-      color: $rgb-cy;
+      color: map.get($colors, "cyan");
       flex: 1 0 auto;
     }
   }
@@ -43,14 +45,14 @@ section {
     // justify-content: flex-start;
     // flex-flow: row wrap;
     // align-items: center;
-    @include flex-cont-inl;
+    @include flex-inline;
     border: $thin;
     border-radius: $radi-2;
     margin: 4px 4px auto;
     padding: 4px 2px 2px 4px;
     text-align: center;
     font-family: $Oxanium;
-    background-color: $rgb-bggradi;
+    background-color: map.get($bgcolors, "green-cyan");
 
     // h3 {
     //   font-family: $MonocraftNF;
@@ -63,21 +65,21 @@ section {
 
     pre {
       font-weight: 275;
-      text-shadow: $txt-shade-3;
+      text-shadow: $shade-3;
       color: $rgb-drab;
     }
 
     p {
       font-weight: 250;
-      color: $rgb-blak;
-      text-shadow: $txt-shade-3;
+      color: map.get($colors, "steel");
+      text-shadow: $shade-3;
     }
 
     code {
       font-family: $MonocraftNF;
-      color: $rgb-neon;
+      color: map.get($colors, "neon");
       font-weight: 300;
-      text-shadow: $txt-shade-2;
+      text-shadow: $shade-2;
       // flex: auto;
     }
   }

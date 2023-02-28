@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { VscMenu, VscFoldUp } from 'react-icons/vsc';
 
-import 'src/styles/Navbar.scss';
+import '../styles/Navbar.scss';
 
 export default function Navbar({ links }) {
 	const [toggle, setToggle] = useState(false);
@@ -10,16 +10,16 @@ export default function Navbar({ links }) {
 	const toggleMenu = () => setToggle(!!toggle);
 
 	return (
-		<div>
-			<form className="toggle-form">
+		<nav>
+			<div className="toggle-form">
 				<label htmlFor="toggle-btn">Menu</label>
 				<button
 					onMouseOver={toggleMenu}
 					className="toggle-btn">
 					{toggle ? <VscFoldUp /> : <VscMenu />}
 				</button>
-			</form>
-			<nav className={toggle ? 'nav-open' : 'nav-close'}>
+			</div>
+			<div className={toggle ? 'nav-open' : 'nav-close'}>
 				<ul onMouseLeave={toggleMenu}>
 					{links.map((link, idx) => (
 						<li
@@ -33,7 +33,7 @@ export default function Navbar({ links }) {
 						</li>
 					))}
 				</ul>
-			</nav>
-		</div>
+			</div>
+		</nav>
 	);
 }

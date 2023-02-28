@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './page/Contact';
+import Contact from './pages/Contact';
 import Landing from './pages/Landing';
 
 export default function App() {

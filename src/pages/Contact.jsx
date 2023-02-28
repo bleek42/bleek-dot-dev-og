@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import { VscCommentDiscussion } from 'react-icons/vsc';
 import { GrLinkedin } from 'react-icons/gr';
 import { FiGithub } from 'react-icons/fi';

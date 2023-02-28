@@ -1,9 +1,9 @@
+import { Fragment } from 'react';
 import { CgCornerRightDown } from 'react-icons/cg';
 
-import Header from 'src/components/Header';
-import Section from 'src/components/Section';
-import Footer from 'src/components/Footer';
-import { Fragment } from 'react';
+import Header from '../components/Header';
+import Section from '../components/Section';
+import Footer from '../components/Footer';
 
 export default function Home() {
 	return (

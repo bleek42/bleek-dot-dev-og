@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import { API_URL, API_TOKEN } from 'src/constants/api-creds';
+import { API_URL, API_TOKEN } from '../constants/api-creds';
 
 const initState = {
   profile: {},

@@ -1,18 +1,20 @@
+@use "sass:map";
+
 @import './vars/index.scss';
 @import './mixins/index.scss';
 
-div {
-	@include flex-cont-row;
-	font-family: $head-font;
+nav {
+	@include flex-row;
+	font-family: $Oxanium;
 	font-size: 20px;
 
 	.toggle-form {
 		margin: 0;
 
 		label {
-			text-shadow: $txt-shadow-2;
+			text-shadow: $shade-2;
 			display: block;
-			color: $color-1;
+			color: map.get($colors, "purple");
 			font-size: 30px;
 			font-weight: 450;
 			letter-spacing: 2px;
@@ -22,7 +24,7 @@ div {
 			border: $def-bord;
 			width: 273px;
 			height: 30px;
-			background: $bg-2;
+			background: map.get($bgcolors, "blue");
 			transition: filter 500ms;
 
 			&:hover {
@@ -34,7 +36,7 @@ div {
 
 	.nav-close {
 		@include nav-bar;
-		font-family: $head-font;
+		font-family: $birdman;
 		bottom: -100%;
 	}
 
@@ -44,7 +46,7 @@ div {
 		position: absolute;
 		top: 65px;
 		letter-spacing: 3px;
-		text-shadow: $txt-shadow-2;
+		text-shadow: $shade-2;
 
 		ul {
 			border: $def-bord;

@@ -1,6 +1,6 @@
 // import React from "react";
 import { useId } from 'react';
-import 'src/styles/Section.scss';
+import '../styles/Section.scss';
 
 // import "./About.scss";
 
@@ -51,7 +51,7 @@ import 'src/styles/Section.scss';
 
 export default function Section({ id, name, content, icon }) {
 	return (
-		<section id={id || 'sect-0'}>
+		<section id={`sect-${id}` || 'sect-0'}>
 			<span>
 				<h3>
 					You are in the<pre>{name || 'unknown'}</pre>section!
