@@ -21,7 +21,7 @@ nav {
 		}
 
 		.toggle-btn {
-			border: $def-bord;
+			border: $thin;
 			width: 273px;
 			height: 30px;
 			background: map.get($bgcolors, "blue");
@@ -29,7 +29,7 @@ nav {
 
 			&:hover {
 				filter: brightness(3);
-				color: #440744;
+				color: map.get($colors, "neon");
 			}
 		}
 	}
@@ -41,34 +41,37 @@ nav {
 	}
 
 	.nav-open {
-		@include nav-flex;
-		background: $bg-1;
+		@include flex-row;
+		background: map.get($bgcolors, "blue");
 		position: absolute;
 		top: 65px;
 		letter-spacing: 3px;
 		text-shadow: $shade-2;
 
 		ul {
-			border: $def-bord;
+			border: $thin;
 			list-style: none;
 
 			li {
 				margin: 10px, 3px, 3px, 10px;
 				padding: 6px, 5px, 5px, 6px;
+        color: map.get($colors, "green");
 				transition: filter 400ms;
 				border-top: 1px solid black;
 
 				&:hover {
 					filter: brightness(2.6);
-					color: $txt-color-1;
+					color: map.get($colors, "cyan");
 				}
 
 				.icon {
+          color: map.get($colors, "neon");
+          font-family: $MonocraftNF;
 					font-size: 3rem;
 				}
 
 				.title {
-					color: $txt-color-1;
+					color: map.get($colors, "green");
 					font-size: 2rem;
 					padding-left: 20px;
 				}

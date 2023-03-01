@@ -7,8 +7,8 @@ header {
   @include flex-inline;
   font-family: $birdman;
   background-color: map.get($bgcolors, "steel-cyan");
-  text-align: left;
   border: $dense;
+  text-align: left;
   border-radius: $radi-1;
   margin: 4px 4px 4px 4px;
   padding: 4px 4px 4px 4px;
@@ -22,7 +22,7 @@ header {
 
   h1 {
     @include txt-header;
-    flex: 1 0 auto;
+    flex: 0 1 auto;
   }
 
   h2 {
@@ -48,6 +48,4 @@ header {
       font-weight: 300;
     }
   }
-
-
 }

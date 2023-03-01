@@ -1,20 +1,22 @@
+@use "sass:map";
+
 @import './vars/index.scss';
 @import './mixins/index.scss';
 
 footer {
-  @include flex-cont-inline;
-  background-color: $bg-color-1;
-  border: $def-bord;
-  border-radius: $def-radi;
+  @include flex-inline;
+  background-color: map.get($bgcolors, "steel-blue");
+  border: $thin;
+  border-radius: $radi-1;
   margin: 3px 3px auto;
   padding: 4px 4px;
 
   i {
-    flex: auto;
+    font-family: $MonocraftNF;
+    color: map.set($colors, "neon");
   }
 
   pre {
-    flex: auto;
-    font-family: $body-font;
+    font-family: $Oxanium;
   }
 }
