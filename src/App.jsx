@@ -9,28 +9,29 @@ import Landing from './pages/Landing';
 
 export default function App() {
 	return (
-		<Fragment>
-			<Landing />
-		</Fragment>
-
 		// <Fragment>
-		// 	<Router>
-		// 		<Switch>
-		// 			<Route
-		// 				path="/home"
-		// 				component={Home}></Route>
-		// 			<Route
-		// 				path="/about"
-		// 				component={About}></Route>
-		// 			<Route
-		// 				path="/projects"
-		// 				component={Projects}></Route>
-		// 			<Route
-		// 				path="/contact"
-		// 				component={Contact}></Route>
-		// 		</Switch>
-		// 	</Router>
+		// 	<Landing />
 		// </Fragment>
+
+		<Fragment>
+			<Router>
+				<Switch>
+					<Route
+						exact
+						path="/"
+						component={Landing}></Route>
+					<Route
+						path="/about"
+						component={About}></Route>
+					<Route
+						path="/projects"
+						component={Projects}></Route>
+					<Route
+						path="/contact"
+						component={Contact}></Route>
+				</Switch>
+			</Router>
+		</Fragment>
 	);
 }
 

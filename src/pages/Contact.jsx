@@ -35,28 +35,7 @@ export default function Contact() {
 				</div>
 			)}
 			<main>
-				{!loading && !error && (
-					<>
-						<Section
-							id="contact-sect-1"
-							name="contact_section_email"
-							content=""
-							icon={null}
-						/>
-						<Section
-							id="contact-sect-2"
-							name="contact_section_linkedin"
-							content=""
-							icon={null}
-						/>
-						<Section
-							id="contact-sect-3"
-							name="contact_section_github"
-							content=""
-							icon={null}
-						/>
-					</>
-				)}
+				{!loading && !error && profile && <List {...profile} />}
 				{error && (
 					<div className="error">
 						<p>
