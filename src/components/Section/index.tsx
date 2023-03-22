@@ -1,17 +1,19 @@
 // import React from "react";
 import { useId } from 'react';
 
-import { Wrapper, Article, Title, Text } from './styles/Section';
-// import '../styles/Section.scss';
+import { Wrapper, Article } from './Section';
+import {Title, BlkTxt, CyTxt } from '../global/index'
 
 export default function Section({ id, name, content, icon }) {
+	const sectionId = useId();
+
 	return (
 		<Wrapper
-			key={`sect-${id}` || `sect-${0}`}
+			key={`sect-${id}` || `sect-${sectionId}`}
 			id={`sect-${id}` || 'sect-0'}>
 			<Title>{name || 'Unknown Section'}</Title>
 			<Article>
-				<Text>{content || 'no article content provided...'}</Text>
+				<BlkTxt>{content || 'no article content provided...'}</BlkTxt>
 			</Article>
 		</Wrapper>
 	);

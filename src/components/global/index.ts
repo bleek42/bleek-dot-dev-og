@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Main = styled.main`
+  height: 800px;
+  background-color: rgb(24, 24, 0);
+  border: 5px solid blue;
+`;
+
 export const Title = styled.h5`
   color: rgb(43, 230, 33);
   font-family: CodeNewRoman-Nerd-Font;

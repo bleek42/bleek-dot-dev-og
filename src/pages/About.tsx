@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect, Fragment, useId } from 'react';
 
 import Header from '../components/Header';
 import Section from '../components/Section';
@@ -6,17 +6,22 @@ import Footer from '../components/Footer';
 
 export default function About(props) {
 	console.log('about page:', props);
-
+	const aboutId = useId();
 	return (
 		<Fragment>
-			<Header id="hedr-about" />
+			<Header
+				id={`hedr-about-${aboutId}`}
+				name="About"
+				content={['content 1...', 'content 2...', 'content 3...']}
+				icon={'\ue456'}
+			/>
 			<Section
 				id="about-sect-1"
 				name="about_section"
 				content=""
 				icon={null}
 			/>
-			<Footer />
+			<Footer id={} />
 		</Fragment>
 	);
 }
