@@ -32,7 +32,7 @@ export default function Section({ id, name, content, icon }) {
 // 	</article>
 // </section>
 // import "./About.scss";
-import { Wrapper } from './Section';
+// import { Wrapper } from './Section';
 
 // export default function About() {
 // 	return (

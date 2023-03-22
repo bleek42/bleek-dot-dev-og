@@ -50,23 +50,3 @@ export const Article = styled.article`
   margin: 3px 3px auto;
   padding: 2px 2px;
 `;
-
-export const Title = styled.h5`
-  color: rgb(43, 230, 33);
-  font-family: CodeNewRoman-Nerd-Font;
-  font-weight: 650;
-  text-align: center;
-  text-shadow: rgb(12, 95, 151) 1px;
-  text-decoration: underline;
-  text-decoration-color: rgb(0, 0, 0);
-  text-decoration-style: double;
-`;
-
-export const Text = styled.p`
-  color: rgb(0, 0, 0);
-  font-family: CodeNewRoman-Nerd-Font;
-  font-weight: 450;
-  text-align: left;
-  text-decoration: 0.5px underline;
-  text-decoration-color: rgb(11, 205, 163);
-`;

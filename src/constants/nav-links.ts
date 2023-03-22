@@ -13,29 +13,42 @@ import { RiBracesFill } from 'react-icons/ri';
 
 // const home = new NavLink(1, 'Home', '/', <RiBracesFill />);
 
-export const navLinks = [
+interface NavLink {
+  id: 1 | 2 | 3 | 4 | 5;
+  title: 'Home' | 'About' | 'Contact' | 'Projects' | 'Resume';
+  path: '/' | '/about' | '/contact' | '/projects' | '/resume';
+  icon?:  '\ue555' | null;
+}
+
+export const navLinks: NavLink[] = [
   {
     id: 1,
     title: 'Home',
     path: '/',
-    icon: <RiBracesFill />,
+    icon: null,
   },
   {
     id: 2,
     title: 'About',
     path: '/about',
-    icon: <VscSymbolArray />,
+    icon: null,
   },
   {
     id: 3,
     title: 'Contact',
     path: '/contact',
-    icon: <VscCommentDiscussion />,
+    icon: null,
   },
   {
     id: 4,
     title: 'Projects',
     path: '/projects',
-    icon: <VscCode />,
+    icon: null,
+  },
+  {
+    id: 5,
+    title: 'Resume',
+    path: '/resume',
+    icon: null,
   },
 ];

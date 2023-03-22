@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { CgCornerRightDown } from 'react-icons/cg';
 
-import Header from '../components/Header/Header';
+import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
 

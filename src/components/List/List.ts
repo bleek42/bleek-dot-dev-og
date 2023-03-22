@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const Wrapper = styled.ul`
 	display: flex;
 	border: 2px solid black;

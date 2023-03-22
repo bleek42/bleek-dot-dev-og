@@ -48,7 +48,7 @@ const reducer = (state: State, action: Actions): State => {
       return {
         ...state,
         loading: false,
-        error: true,
+        error: action.payload,
         msg: 'ERROR: Unsuccessful Request!',
       };
     default:
@@ -60,6 +60,8 @@ export const useRequest = () => {
   const [{ profile, loading, error, msg }, dispatch] = useReducer(reducer, initState);
   useEffect(() => {
     let ignore = false;
+
+    const controller = new AbortController();
     (async () => {
       try {
         const req: RequestInit = {
@@ -69,15 +71,22 @@ export const useRequest = () => {
           cache: 'force-cache',
         };
         const res: Response = await fetch(API_URL, req);
-        if (!res.ok) dispatch({ type: 'ERROR', payload: {} });
+        if (!res.ok)
+          dispatch({
+            type: 'ERROR',
+            payload: { status: res.status, message: res.statusText },
+          });
         const data = await res.json();
-        if (!ignore && data) dispatch({ type: 'SUCCESS', payload: data });
-      } catch {
-        dispatch({ type: 'ERROR', payload: 'Internal Server Error' });
+        if (!ignore && data) dispatch({ type: 'SUCCESS', payload: { ...data } });
+      } catch (err) {
+        dispatch({ type: 'ERROR', payload: err || 'Unknown useRequest Error' });
+      } finally {
+        console.info('useRequest controller:', controller);
       }
     })();
     return () => {
       ignore = true;
+      // controller.abort();
     };
   }, []);
 

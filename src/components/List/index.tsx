@@ -7,9 +7,10 @@ export default function List(props: ListProps) {
 
 	return (
 		<ul>
+			{!props.items && <li>No items to display in list component...</li>}
 			{props?.items &&
-				Array.isArray(props?.items) &&
-				props?.items?.map((item, idx) => (
+				props.items.length > 0 &&
+				props.items.map((item, idx) => (
 					<li key={item?.id || idx}>
 						{item?.url && (
 							<p>
