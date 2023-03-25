@@ -1,7 +1,4 @@
-import { Fragment, useId } from 'react';
-import { VscCommentDiscussion } from 'react-icons/vsc';
-import { GrLinkedin } from 'react-icons/gr';
-import { FiGithub } from 'react-icons/fi';
+import React, { Fragment, useId } from 'react';
 
 import Header from '../components/Header';
 import Section from '../components/Section';
@@ -12,12 +9,16 @@ import List from '../components/List';
 
 export default function Contact() {
 	const { profile, loading, error, msg } = useRequest();
-	const contactId = useId();
+	const pageId = useId();
+
+	const linkedInIcon = ' \uf08c ';
+	const commentIcon = ' \udb80\udd7b ';
+	const githubIcon = ' \uf092 ';
 
 	return (
 		<Fragment>
 			<Header
-				id={`contact-${contactId}`}
+				id={`contact-header-${pageId}`}
 				name="Contact"
 				content={['some', 'contact', 'header', 'content']}
 				icon={null}
@@ -39,7 +40,7 @@ export default function Contact() {
 				)}
 			</main>
 			<Footer
-				id={`contact-${contactId}`}
+				id={`contact-footer-${pageId}`}
 				name="Contact"
 				icon={null}
 			/>

@@ -1,54 +1,51 @@
-import React from 'react';
-import { VscCommentDiscussion, VscCode, VscSymbolArray } from 'react-icons/vsc';
-import { RiBracesFill } from 'react-icons/ri';
+export type PageId = 1 | 2 | 3 | 4 | 5;
+export type PageTitle = 'Home' | 'About' | 'Contact' | 'Projects' | 'Resume';
+export type PagePath = '/home' | '/about' | '/contact' | '/projects' | '/resume';
+export type PageIcon =
+  | ' \udb83\udd84 '
+  | ' \udb84\udcf6 '
+  | ' \udb84\udcdc '
+  | ' \udb84\udcd6 '
+  | ' \udb84\udcf8 '
+  | ' \ue601 '
+  | null;
 
-// class NavLink {
-//   constructor(id, title, path, icon) {
-//     this.id = id;
-//     this.title = title;
-//     this.path = path;
-//     this.icon = icon;
-//   }
-// }
-
-// const home = new NavLink(1, 'Home', '/', <RiBracesFill />);
-
-export interface NavLink {
-  id: 1 | 2 | 3 | 4 | 5;
-  title: 'Home' | 'About' | 'Contact' | 'Projects' | 'Resume';
-  path: '/' | '/about' | '/contact' | '/projects' | '/resume';
-  icon?: '\ue555' | null;
+export interface NavLink<PageId, PageTitle, PagePath, PageIcon> {
+  id: PageId;
+  title: PageTitle;
+  path: PagePath;
+  icon: PageIcon;
 }
 
-export const navLinks: NavLink[] = [
+export const navLinks: NavLink<PageId, PageTitle, PagePath, PageIcon>[] = [
   {
     id: 1,
     title: 'Home',
-    path: '/',
-    icon: null,
+    path: '/home',
+    icon: ' \udb83\udd84 ',
   },
   {
     id: 2,
     title: 'About',
     path: '/about',
-    icon: null,
+    icon: ' \udb84\udcf6 ',
   },
   {
     id: 3,
     title: 'Contact',
     path: '/contact',
-    icon: null,
+    icon: ' \udb84\udcdc ',
   },
   {
     id: 4,
     title: 'Projects',
     path: '/projects',
-    icon: null,
+    icon: ' \udb84\udcd6 ',
   },
   {
     id: 5,
     title: 'Resume',
     path: '/resume',
-    icon: null,
+    icon: ' \ue601 ',
   },
 ];
