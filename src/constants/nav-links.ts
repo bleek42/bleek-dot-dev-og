@@ -13,11 +13,11 @@ import { RiBracesFill } from 'react-icons/ri';
 
 // const home = new NavLink(1, 'Home', '/', <RiBracesFill />);
 
-interface NavLink {
+export interface NavLink {
   id: 1 | 2 | 3 | 4 | 5;
   title: 'Home' | 'About' | 'Contact' | 'Projects' | 'Resume';
   path: '/' | '/about' | '/contact' | '/projects' | '/resume';
-  icon?:  '\ue555' | null;
+  icon?: '\ue555' | null;
 }
 
 export const navLinks: NavLink[] = [

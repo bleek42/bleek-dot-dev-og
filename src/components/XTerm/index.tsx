@@ -1,19 +1,17 @@
 import { useState } from 'react';
 
 import {
-	XTerm
+	XTerminal,
 	XTHeader,
 	XTShell,
+	XTSpan,
 	XTBtns,
 	ClsBtn,
 	MaxBtn,
 	MinBtn,
 	XTScreen,
-	XTSpan,
 	Shebang,
 } from './XTerm';
-import { Main } from '../global/index';
-import { XTShell, XTerminal, XTHeader } from './XTerm';
 
 type XTermCols = 120 | 100 | 80 | 60 | 40 | 0;
 type XTermRows = 100 | 90 | 80 | 70 | 60 | 50 | 40;
@@ -30,7 +28,7 @@ type XTermProps = XTermSize;
 export default function XTerm({ cols = 80, rows = 100, area }: XTermProps) {
 	console.log(area, cols, rows);
 	return (
-		<Main>
+		<main>
 			<XTerminal>
 				<XTHeader>
 					<XTBtns id="xterm-btns">
@@ -82,7 +80,7 @@ export default function XTerm({ cols = 80, rows = 100, area }: XTermProps) {
 					/>
 				</XTShell>
 			</XTerminal>
-		</Main>
+		</main>
 	);
 }
 

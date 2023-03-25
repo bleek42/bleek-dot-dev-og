@@ -1,5 +1,4 @@
 import { useEffect, useReducer } from 'react';
-import { API_URL, API_TOKEN } from '../constants/config';
 
 interface State {
   profile: {};

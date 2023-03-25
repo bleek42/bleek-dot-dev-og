@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { useId, Fragment } from 'react';
 import { CgCornerRightDown } from 'react-icons/cg';
 
 import Header from '../components/Header';
@@ -6,22 +6,30 @@ import Section from '../components/Section';
 import Footer from '../components/Footer';
 
 export default function Home() {
+	const homeId = useId();
+
 	return (
 		<Fragment>
 			<Header
-				id="home-hedr"
-				page="Home"
+				id={`home-${homeId}`}
+				name="Home"
 				content=""
 				icon={null}
 			/>
-			<Section
-				id="home-sect-1"
-				name="home"
-				content="Welcome to bleek.dev! My name is Brandon Leek and I'm a full-stack
+			<main>
+				<Section
+					id="home-sect-1"
+					name="home"
+					content="Welcome to bleek.dev! My name is Brandon Leek and I'm a full-stack
 			web developer & tech enthusiast. This site is built with React.js in conjunction with other modern solutions including (but never limited to!) custom state management hooks, React Router, React Icons, Syntactically Awesome Style Sheets (SASS/SCSS), and test suites written with Jest & Enzyme."
+					icon={null}
+				/>
+			</main>
+			<Footer
+				id={''}
+				page={''}
 				icon={null}
 			/>
-			<Footer />
 		</Fragment>
 	);
 }

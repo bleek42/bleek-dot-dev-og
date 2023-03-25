@@ -8,7 +8,7 @@
     "url": "https://github.com/bleek42/bleek-dot-dev-og"
   },
   "scripts": {
-    "dev": "vite --port 6700 --open true",
+    "dev": "vite --port 3000 --open true",
     "build": "tsc && vite build",
     "build:watch": "tsc --noEmit --watch",
     "preview": "vite preview",

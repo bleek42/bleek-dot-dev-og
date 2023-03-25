@@ -1,40 +1,33 @@
-import { Fragment } from 'react';
+import { Fragment, useId } from 'react';
 import { VscCommentDiscussion } from 'react-icons/vsc';
 import { GrLinkedin } from 'react-icons/gr';
 import { FiGithub } from 'react-icons/fi';
 
-import Header from '../components/Header/Header';
+import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
 
 import { useRequest } from '../hooks/useRequest';
+import List from '../components/List';
 
 export default function Contact() {
 	const { profile, loading, error, msg } = useRequest();
+	const contactId = useId();
 
 	return (
 		<Fragment>
-			{/* <header>
-				<h4>{<VscCommentDiscussion />} Contact</h4>
-				<p>
-					Whether you're about to make me an offer I can't refuse, thinking
-					about becoming a developer, or somewhere in between: I'd love to
-					connect if you're taking the time to read this! Please reach out on
-					LinkedIn or GitHub.
-				</p>
-			</header> */}
 			<Header
-				id="contact-hedr"
-				page="Contact"
-				content=""
+				id={`contact-${contactId}`}
+				name="Contact"
+				content={['some', 'contact', 'header', 'content']}
 				icon={null}
 			/>
-			{loading && (
-				<div className="loading">
-					<progress>loading...</progress>
-				</div>
-			)}
 			<main>
+				{loading && (
+					<div className="loading">
+						<progress>loading...</progress>
+					</div>
+				)}
 				{!loading && !error && profile && <List {...profile} />}
 				{error && (
 					<div className="error">
@@ -45,8 +38,17 @@ export default function Contact() {
 					</div>
 				)}
 			</main>
-			<Footer />
-			{/* <section className="linkedin">
+			<Footer
+				id={`contact-${contactId}`}
+				name="Contact"
+				icon={null}
+			/>
+		</Fragment>
+	);
+}
+
+{
+	/* <section className="linkedin">
 				<h4>{<GrLinkedin />} LinkedIn</h4>
 				<a
 					id="my-linkedin"
@@ -74,7 +76,17 @@ export default function Contact() {
 					</ul>
 				)}
 				{error && <p>Error fetching profile data: {msg.toString()}</p>}
-			</section> */}
-		</Fragment>
-	);
+			</section> */
+}
+
+{
+	/* <header>
+				<h4>{<VscCommentDiscussion />} Contact</h4>
+				<p>
+					Whether you're about to make me an offer I can't refuse, thinking
+					about becoming a developer, or somewhere in between: I'd love to
+					connect if you're taking the time to read this! Please reach out on
+					LinkedIn or GitHub.
+				</p>
+			</header> */
 }

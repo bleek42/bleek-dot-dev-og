@@ -3,10 +3,12 @@ import { useState, useEffect, Fragment, useId } from 'react';
 import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
+import { Main } from '../components/global';
 
-export default function About(props) {
-	console.log('about page:', props);
+export default function About() {
+	console.log('about page:');
 	const aboutId = useId();
+
 	return (
 		<Fragment>
 			<Header
@@ -15,13 +17,19 @@ export default function About(props) {
 				content={['content 1...', 'content 2...', 'content 3...']}
 				icon={'\ue456'}
 			/>
-			<Section
-				id="about-sect-1"
-				name="about_section"
-				content=""
+			<main>
+				<Section
+					id="about-sect-1"
+					name="about_section"
+					content=""
+					icon={null}
+				/>
+			</main>
+			<Footer
+				id={`about-${aboutId}`}
+				page={''}
 				icon={null}
 			/>
-			<Footer id={} />
 		</Fragment>
 	);
 }

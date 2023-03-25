@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { VscMenu, VscFoldUp } from 'react-icons/vsc';
+// import { VscMenu, VscFoldUp } from 'react-icons/vsc';
 
 import {
 	Nav,
@@ -11,8 +11,6 @@ import {
 	NavItem,
 } from './Navbar';
 import { navLinks } from '../../constants/nav-links';
-
-import '../styles/Navbar.scss';
 
 type ToggleProps = JSX.IntrinsicElements['span'] & {
 	isToggled: boolean;

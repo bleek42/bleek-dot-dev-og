@@ -1,21 +1,19 @@
-import type { ReactElement, ReactNode, ReactSVGElement } from 'react';
-
 import { Wrapper } from './Footer';
+import { BlkTxt } from '../global';
 
 type FooterProps = JSX.IntrinsicElements['footer'] & {
-	id: number;
+	id: number | string;
 	name: string;
-	content: string;
-	icon?: SVGElement | ReactElement | ReactNode;
+	icon?: '\ue450' | '\ue233' | '\ue344' | null;
 };
 
-export default function Footer(props: FooterProps) {
-	console.log('Footer:', props);
+export default function Footer({ id, name, icon }: FooterProps) {
+	console.log('Footer:', id, name, icon);
 
 	return (
 		<Wrapper>
 			<i>{'<NoIcon />'}</i>
-			<pre>version 0.4.4 by bleek42</pre>
+			<BlkTxt>version 0.4.4 by bleek42</BlkTxt>
 		</Wrapper>
 	);
 }

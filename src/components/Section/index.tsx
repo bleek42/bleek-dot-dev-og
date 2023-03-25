@@ -2,7 +2,7 @@
 import { useId } from 'react';
 
 import { Wrapper, Article } from './Section';
-import {Title, BlkTxt, CyTxt } from '../global/index'
+import { StlLg, BlkTxt, CyTxt } from '../global/index';
 
 export default function Section({ id, name, content, icon }) {
 	const sectionId = useId();
@@ -11,7 +11,7 @@ export default function Section({ id, name, content, icon }) {
 		<Wrapper
 			key={`sect-${id}` || `sect-${sectionId}`}
 			id={`sect-${id}` || 'sect-0'}>
-			<Title>{name || 'Unknown Section'}</Title>
+			<StlLg>{name || 'Unknown Section'}</StlLg>
 			<Article>
 				<BlkTxt>{content || 'no article content provided...'}</BlkTxt>
 			</Article>
