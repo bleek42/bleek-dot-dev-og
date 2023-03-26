@@ -26,7 +26,7 @@ export default function About() {
 			</main>
 			<Footer
 				id={`about-footer-${pageId}`}
-				name={''}
+				name="About"
 				icon={null}
 			/>
 		</Fragment>

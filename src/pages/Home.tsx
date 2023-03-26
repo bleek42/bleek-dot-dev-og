@@ -4,14 +4,15 @@ import { CgCornerRightDown } from 'react-icons/cg';
 import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
+import React from 'react';
 
 export default function Home() {
-	const homeId = useId();
+	const pageId = useId();
 
 	return (
 		<Fragment>
 			<Header
-				id={`home-${homeId}`}
+				id={`home-header-${pageId}`}
 				name="Home"
 				content=""
 				icon={null}
@@ -27,7 +28,7 @@ export default function Home() {
 			</main>
 			<Footer
 				id={''}
-				page={''}
+				name={`home-footer-${pageId}`}
 				icon={null}
 			/>
 		</Fragment>

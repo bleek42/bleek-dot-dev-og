@@ -14,6 +14,7 @@ specifiers:
   '@vitejs/plugin-react-swc': ^3.0.0
   dotenv: ^16.0.3
   eslint: 8.31.0
+  eslint-config-prettier: ^8.8.0
   eslint-plugin-react: ^7.32.2
   eslint-plugin-react-refresh: ^0.3.4
   prettier: 2.8.2
@@ -50,6 +51,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.56.0_ifw3q4r6iq3gw7cspzs2siycvu
   '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.1
   eslint: 8.31.0
+  eslint-config-prettier: 8.8.0_eslint@8.31.0
   eslint-plugin-react: 7.32.2_eslint@8.31.0
   eslint-plugin-react-refresh: 0.3.4_eslint@8.31.0
   prettier: 2.8.2
@@ -4904,6 +4906,15 @@ packages:
     optionalDependencies:
       source-map: 0.6.1
     dev: false
+
+  /eslint-config-prettier/8.8.0_eslint@8.31.0:
+    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.31.0
+    dev: true
 
   /eslint-config-react-app/7.0.1_jvmf5ioj6lefzogainacxak2i4:
     resolution: {integrity: sha512-K6rNzvkIeHaTd8m/QEh1Zko0KI7BACWkkneSs6s9cKZC/J27X3eZR6Upt1jkmZ/4FK+XUOPPxMEN7+lbUXfSlA==}

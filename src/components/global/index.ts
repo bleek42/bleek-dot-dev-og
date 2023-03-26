@@ -7,8 +7,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
-  body {
-    color: rgb(10, 10, 10);
+  main {
+    height: 800px;
+    min-height: 40%;
   }
 `;
 
